@@ -23,6 +23,7 @@ extension Constants {
             
             static let site = "site"
             static let stackOverflow = "stackoverflow"
+            static let arrayDefault = "json_array_values"
         }
     }
 }

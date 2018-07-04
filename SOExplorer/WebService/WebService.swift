@@ -15,7 +15,7 @@ class WebService {
     
     // MARK: - Type Aliases
     
-    typealias WebServiceCompletion = (DataResponse<Any>) -> Void
+    typealias WebServiceCompletion = (DataResponse<JSON>) -> Void
     
     // MARK: - Properties
     
@@ -31,9 +31,12 @@ class WebService {
     static func sendJSONRequest(_ path: WebPath, method: Alamofire.HTTPMethod, parameters: Parameters? = nil, headers: HTTPHeaders? = nil, completion: @escaping WebServiceCompletion) -> DataRequest {
     
         let encoding: ParameterEncoding = {
+            
             switch method {
+                
             case .get, .head, .delete:
                 return URLEncoding.default
+                
             default:
                 return JSONEncoding.default
             }
@@ -42,7 +45,30 @@ class WebService {
         return sessionManager.request(path, method: method, parameters: parameters, encoding: encoding, headers: headers).validate().responseJSON(completionHandler: { response in
             
             WebLogger.logRequest(using: response.request, response: response)
-            completion(response)
+            completion(response.flatMap(jsonObject(from:)))
         })
+    }
+    
+    // MARK: - Utility methods
+    
+    private static func jsonObject(from response: Any?) -> JSON {
+        
+        guard let response = response else { return [:] }
+        
+        let json: JSON
+        
+        switch response {
+            
+        case let response as [JSON]:
+            json = [WebKeys.Core.arrayDefault: response]
+            
+        case let response as JSON:
+            json = response
+            
+        default:
+            json = [:]
+        }
+        
+        return json
     }
 }
