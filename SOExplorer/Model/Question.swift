@@ -11,6 +11,7 @@ import Foundation
 struct Question: SOCodable {
     
     let acceptedAnswerId: Int?
+    let answerCount: Int
     let creationDate: Date
     let isAnswered: Bool
     let link: URL?
