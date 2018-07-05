@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CocoaLumberjack
 
 protocol SOCodable: Codable {
     
@@ -31,7 +32,7 @@ extension SOCodable {
             return try Self.decoder.decode([Self].self, from: jsonData)
         }
         catch let error {
-            print("Error parsing \(Self.self): \(error.localizedDescription)")
+            DDLogError("Error parsing \(Self.self): \(error.localizedDescription)")
             return []
         }
     }

@@ -20,7 +20,7 @@ struct WebLogger {
         else { DDLogError("No request to log"); return }
         
         var logString = """
-        _____________Log Start_____________
+        \n_____________Log Start_____________
         
         URL: \(urlRequest.url?.absoluteString ?? "Unknown")
         
@@ -38,6 +38,6 @@ struct WebLogger {
         
         logString.append("\n_____________Log End_____________")
         
-        print(logString)
+        DDLogDebug(logString)
     }
 }
