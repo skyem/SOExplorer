@@ -22,6 +22,9 @@
 		3A4572E620ED273200B8A900 /* WebPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4572E520ED273200B8A900 /* WebPath.swift */; };
 		3A4572E820ED2F4F00B8A900 /* WebLogging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4572E720ED2F4F00B8A900 /* WebLogging.swift */; };
 		3A4572EA20ED590200B8A900 /* WebService+Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4572E920ED590200B8A900 /* WebService+Questions.swift */; };
+		3A4572ED20ED7FBE00B8A900 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4572EC20ED7FBE00B8A900 /* Question.swift */; };
+		3A4572F120EDA19A00B8A900 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4572F020EDA19A00B8A900 /* Owner.swift */; };
+		3A4572F320EDA5F300B8A900 /* SOCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4572F220EDA5F300B8A900 /* SOCodable.swift */; };
 		7DCF3892A6F6E060F00FACF3 /* Pods_SOExplorerKIFTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA5C49D0DA68E0C54A6A01F /* Pods_SOExplorerKIFTests.framework */; };
 		B69199640368162F776913F3 /* Pods_SOExplorerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2044BEF04B47A667E38530F /* Pods_SOExplorerTests.framework */; };
 		C4A7ABD765A8969B407DA381 /* Pods_SOExplorer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E09E58BB12C297DCD3A38D5A /* Pods_SOExplorer.framework */; };
@@ -82,6 +85,9 @@
 		3A4572E520ED273200B8A900 /* WebPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPath.swift; sourceTree = "<group>"; };
 		3A4572E720ED2F4F00B8A900 /* WebLogging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebLogging.swift; sourceTree = "<group>"; };
 		3A4572E920ED590200B8A900 /* WebService+Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WebService+Questions.swift"; sourceTree = "<group>"; };
+		3A4572EC20ED7FBE00B8A900 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		3A4572F020EDA19A00B8A900 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
+		3A4572F220EDA5F300B8A900 /* SOCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOCodable.swift; sourceTree = "<group>"; };
 		67178901457916735BE1AFC9 /* Pods-SOExplorer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOExplorer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SOExplorer/Pods-SOExplorer.debug.xcconfig"; sourceTree = "<group>"; };
 		A2044BEF04B47A667E38530F /* Pods_SOExplorerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SOExplorerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E09E58BB12C297DCD3A38D5A /* Pods_SOExplorer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SOExplorer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -155,6 +161,7 @@
 				3A45729E20ED065F00B8A900 /* ViewController.swift */,
 				3A4572DD20ED258700B8A900 /* WebService */,
 				3A4572E020ED25B900B8A900 /* Utility */,
+				3A4572EB20ED7F9A00B8A900 /* Model */,
 				3A4572A020ED065F00B8A900 /* Main.storyboard */,
 				3A4572A320ED066100B8A900 /* Assets.xcassets */,
 				3A4572A520ED066100B8A900 /* LaunchScreen.storyboard */,
@@ -216,8 +223,26 @@
 			isa = PBXGroup;
 			children = (
 				3A4572E120ED25FF00B8A900 /* Constants.swift */,
+				3A4572F420EDA5FC00B8A900 /* Protocols */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		3A4572EB20ED7F9A00B8A900 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3A4572EC20ED7FBE00B8A900 /* Question.swift */,
+				3A4572F020EDA19A00B8A900 /* Owner.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3A4572F420EDA5FC00B8A900 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				3A4572F220EDA5F300B8A900 /* SOCodable.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		6A7416003AE1B26D761AB10E /* Pods */ = {
@@ -533,9 +558,12 @@
 				3A4572DF20ED25A100B8A900 /* WebService.swift in Sources */,
 				3A4572E620ED273200B8A900 /* WebPath.swift in Sources */,
 				3A4572EA20ED590200B8A900 /* WebService+Questions.swift in Sources */,
+				3A4572ED20ED7FBE00B8A900 /* Question.swift in Sources */,
 				3A4572E820ED2F4F00B8A900 /* WebLogging.swift in Sources */,
 				3A4572E420ED269800B8A900 /* Constants+WebKeys.swift in Sources */,
 				3A45729F20ED065F00B8A900 /* ViewController.swift in Sources */,
+				3A4572F120EDA19A00B8A900 /* Owner.swift in Sources */,
+				3A4572F320EDA5F300B8A900 /* SOCodable.swift in Sources */,
 				3A45729D20ED065F00B8A900 /* AppDelegate.swift in Sources */,
 				3A4572E220ED25FF00B8A900 /* Constants.swift in Sources */,
 			);

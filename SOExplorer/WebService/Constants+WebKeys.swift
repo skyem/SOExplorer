@@ -25,5 +25,10 @@ extension Constants {
             static let stackOverflow = "stackoverflow"
             static let arrayDefault = "json_array_values"
         }
+        
+        struct Question {
+            
+            static let items = "items"
+        }
     }
 }

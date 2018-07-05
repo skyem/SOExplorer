@@ -42,7 +42,16 @@ class WebService {
             }
         }()
         
-        return sessionManager.request(path, method: method, parameters: parameters, encoding: encoding, headers: headers).validate().responseJSON(completionHandler: { response in
+        var finalParameters: JSON = [
+            WebKeys.Core.site: WebKeys.Core.stackOverflow
+        ]
+        
+        if let parameters = parameters {
+
+            finalParameters.merge(parameters, uniquingKeysWith: { (current, _) in current })
+        }
+        
+        return sessionManager.request(path, method: method, parameters: finalParameters, encoding: encoding, headers: headers).validate().responseJSON(completionHandler: { response in
             
             WebLogger.logRequest(using: response.request, response: response)
             completion(response.flatMap(jsonObject(from:)))
