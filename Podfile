@@ -6,10 +6,6 @@ use_frameworks!
 workspace 'SOExplorer'
 project 'SOExplorer'
 
-def common_pods 
-	pod 'OHHTTPStubs/Swift', :configurations => ['Debug']
-end
-
 def core_pods
     pod 'Alamofire'
     pod 'Crashlytics'
@@ -25,12 +21,14 @@ target 'SOExplorer' do
   
   target 'SOExplorerTests' do
     inherit! :search_paths
-    common_pods
+  end
+  
+  target 'SOExplorerUITests' do
+      inherit! :search_paths
   end
   
   target 'SOExplorerKIFTests' do
     inherit! :search_paths
     pod 'KIF', :configurations => ['Debug']
-	common_pods
   end
 end

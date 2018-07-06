@@ -4,10 +4,48 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>SOExplorer.xcscheme</key>
+		<key>SOExplorer.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>10</integer>
+		</dict>
+		<key>SOExplorerKIFTests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>12</integer>
+		</dict>
+		<key>SOExplorerTests.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>9</integer>
+		</dict>
+		<key>SOExplorerUITests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>11</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>3A45729820ED065F00B8A900</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3A4572AC20ED066100B8A900</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3A4572B720ED066100B8A900</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3A4572D020ED1B7100B8A900</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

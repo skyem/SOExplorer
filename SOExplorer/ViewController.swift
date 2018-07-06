@@ -28,8 +28,14 @@ class ViewController: UIViewController {
                 DDLogDebug("Retrieved questions")
                 guard let questionJSONArray = json[WebKeys.Question.items] as? [JSON] else { DDLogError("Questions array not found"); return }
 
-                let questions = Question.decode(from: questionJSONArray)
-                DDLogVerbose("Questions: \(questions)")
+                do {
+                    let questions = try Question.decode(from: questionJSONArray)
+                    DDLogVerbose("Questions: \(questions)")
+                }
+                catch let error {
+    
+                    DDLogError("Unable to decode Questions: \(error.localizedDescription)")
+                }
             }
         }
     }
