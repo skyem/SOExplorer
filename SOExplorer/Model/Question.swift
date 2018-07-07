@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Question: SOCodable {
+final class Question: SOCodable {
     
     let acceptedAnswerId: Int?
     let answerCount: Int
@@ -19,4 +19,5 @@ struct Question: SOCodable {
     let questionId: Int
     let tags: [String]
     let title: String
+    var isRead: Bool? = false
 }
