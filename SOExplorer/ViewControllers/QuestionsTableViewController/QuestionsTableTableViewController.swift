@@ -8,10 +8,20 @@
 
 import UIKit
 import Reusable
+import SafariServices
 
 class QuestionsTableTableViewController: UITableViewController {
 
+    // MARK: - Constants
+    
+    let pageLimit = 1
+    let preferredQuestionAmount = 30
+    
+    // MARK: - Properties
+    
     var questions: [Question] = []
+    
+    // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,5 +52,19 @@ class QuestionsTableTableViewController: UITableViewController {
         let question = questions[indexPath.row]
         question.isRead = true
         tableView.reloadData()
+        
+        guard let questionURL = question.link else { return }
+        
+        let safariViewController = SFSafariViewController(url: questionURL.absoluteURL)
+        safariViewController.delegate = self
+        present(safariViewController, animated: true, completion: nil)
+    }
+}
+
+extension QuestionsTableTableViewController: SFSafariViewControllerDelegate {
+    
+    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+        
+        dismiss(animated: true, completion: nil)
     }
 }

@@ -23,7 +23,7 @@ class QuestionTableViewCell: UITableViewCell, NibReusable {
     func configure(withTitle title: String, isRead: Bool) {
         
         titleLabel.text = title
-        roundedView.backgroundColor = isRead ? .usRed : .usBlue
+        roundedView.backgroundColor = isRead ? UIColor.soGray : .soTeal
         setUpRoundedView()
     }
     

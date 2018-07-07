@@ -31,7 +31,7 @@ extension QuestionsTableTableViewController {
                     let filteredQuestions = questions.filter { return $0.isAnswered && $0.answerCount > 1 }
                     self.questions.append(contentsOf: filteredQuestions)
                     DDLogDebug("Question count is: \(self.questions.count)")
-                    if self.questions.count < 50 && page < 8 {
+                    if self.questions.count < self.preferredQuestionAmount && page < self.pageLimit {
                         
                         self.loadQuestions(forPage: page + 1)
                     }

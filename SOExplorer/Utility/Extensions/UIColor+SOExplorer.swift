@@ -11,11 +11,35 @@ import UIKit
 
 extension UIColor {
     
-    static var usBlue: UIColor {
-        return UIColor(red: 10 / 255, green: 84 / 255, blue: 162 / 255, alpha: 1)
+    static var soBeige: UIColor {
+        return UIColor(red: 203 / 255, green: 191 / 255, blue: 174 / 255, alpha: 1)
     }
     
-    static var usRed: UIColor {
-        return UIColor(red: 221 / 255, green: 27 / 255, blue: 50 / 255, alpha: 1)
+    static var soBlueGray: UIColor {
+        return UIColor(red: 81 / 255, green: 95 / 255, blue: 111 / 255, alpha: 1)
+    }
+    
+    static var soBrown: UIColor {
+        return UIColor(red: 117 / 255, green: 90 / 255, blue: 87 / 255, alpha: 1)
+    }
+    
+    static var soGray: UIColor {
+        return UIColor(red: 212 / 255, green: 209 / 255, blue: 202 / 255, alpha: 1)
+    }
+    
+    static var soLighterGray: UIColor {
+        return UIColor(red: 224 / 255, green: 224 / 255, blue: 224 / 255, alpha: 1)
+    }
+    
+    static var soLightGray: UIColor {
+        return UIColor(red: 194 / 255, green: 196 / 255, blue: 205 / 255, alpha: 1)
+    }
+    
+    static var soLightTeal: UIColor {
+        return UIColor(red: 191 / 255, green: 212 / 255, blue: 220 / 255, alpha: 1)
+    }
+    
+    static var soTeal: UIColor {
+        return UIColor(red: 101 / 255, green: 126 / 255, blue: 136 / 255, alpha: 1)
     }
 }
