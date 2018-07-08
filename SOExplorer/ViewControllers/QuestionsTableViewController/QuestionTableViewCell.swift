@@ -8,23 +8,47 @@
 
 import UIKit
 import Reusable
+import AlamofireImage
+import CocoaLumberjack
+
+protocol QuestionCellDelegate: class {
+    
+    func showAcceptedAnswer(withID identifier: Int, shouldShow: Bool)
+    func showProfile(for owner: Owner)
+}
 
 class QuestionTableViewCell: UITableViewCell, NibReusable {
     
     @IBOutlet weak var roundedView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var viewApprovedAnswerView: UIView!
+    @IBOutlet weak var approvedAnswerStackView: UIStackView!
+    @IBOutlet weak var viewAnswerButton: UIButton!
+    @IBOutlet weak var viewAnswerLabel: UILabel!
+    @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var questionNumberLabel: UILabel!
+    @IBOutlet weak var userImageView: UIImageView!
+    @IBOutlet weak var tagsLabel: UILabel!
+    @IBOutlet weak var answeringUserImageView: UIImageView!
+    @IBOutlet weak var answeringUserLabel: UILabel!
+    @IBOutlet weak var answeringUserReputationLabel: UILabel!
+    @IBOutlet weak var ownerButton: UIButton!
+    @IBOutlet weak var answerOwnerButton: UIButton!
     
+    weak var delegate: QuestionCellDelegate?
     var question: Question?
-    
-    // MARK: - Lifecycle
-    
+    var shouldShowAcceptedAnswer = false
+
     // MARK: - Config
     
-    func configure(withTitle title: String, isRead: Bool) {
+    func configure(using question: Question, shouldShowAcceptedAnswer: Bool) {
         
-        titleLabel.text = title
-        roundedView.backgroundColor = isRead ? UIColor.soGray : .soTeal
+        self.question = question
+        self.shouldShowAcceptedAnswer = shouldShowAcceptedAnswer
         setUpRoundedView()
+        setUpQuestionViews(with: question)
+        setUpApprovedAnswerView(with: question)
+        setUpAnsweringUserViews(with: question)
     }
     
     // MARK: - Setup
@@ -33,5 +57,68 @@ class QuestionTableViewCell: UITableViewCell, NibReusable {
         
         roundedView.layer.cornerRadius = 10
         roundedView.layer.masksToBounds = true
+    }
+    
+    func setUpQuestionViews(with question: Question) {
+
+        let isRead = question.isRead ?? false
+        roundedView.backgroundColor = isRead ? UIColor.soBrown : .soTeal
+        titleLabel.text = question.title
+        questionNumberLabel.text = String(question.questionId)
+        userNameLabel.text = question.owner.displayName
+        tagsLabel.text = question.tags.joined(separator: " ")
+
+        guard let userImageURL = question.owner.profileImage else { return }
+        
+        userImageView.af_setImage(withURL: userImageURL)
+    }
+    
+    func setUpApprovedAnswerView(with question: Question) {
+        
+        viewAnswerLabel.text = shouldShowAcceptedAnswer ? Constants.Questions.hideWhoAnsweredIt : Constants.Questions.showWhoAnsweredIt
+        viewApprovedAnswerView.isHidden = question.acceptedAnswerId == nil
+        approvedAnswerStackView.isHidden = !shouldShowAcceptedAnswer
+    }
+    
+    func setUpAnsweringUserViews(with question: Question) {
+        
+        guard shouldShowAcceptedAnswer else { return }
+        
+        answeringUserLabel.text = question.owner.displayName
+        
+        guard let userImageURL = question.owner.profileImage else { return }
+        
+        answeringUserImageView.af_setImage(withURL: userImageURL)
+        
+        guard let reputation = question.owner.reputation else {
+            
+            answeringUserReputationLabel.text = "Unknown"
+            return
+        }
+        
+        answeringUserReputationLabel.text = String(reputation)
+    }
+    
+    // MARK: - Actions
+    
+    @IBAction func viewQuestionWasTapped(_ sender: UIButton) {
+        
+        guard let acceptedAnswerID = question?.acceptedAnswerId else { assertionFailure("No acceptedAnswerID found in question"); return }
+        
+        delegate?.showAcceptedAnswer(withID: acceptedAnswerID, shouldShow: !shouldShowAcceptedAnswer)
+    }
+    
+    @IBAction func ownerButtonWasTapped(_ sender: UIButton) {
+        
+        guard let question = question else { DDLogError("No question found"); return }
+        
+        delegate?.showProfile(for: question.owner)
+    }
+    
+    @IBAction func answerOwnerButtonWasTapped(_ sender: UIButton) {
+        
+        guard let question = question else { DDLogError("No question found"); return }
+        
+        delegate?.showProfile(for: question.owner)
     }
 }

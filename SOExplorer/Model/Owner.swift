@@ -13,5 +13,5 @@ struct Owner: Codable {
     let displayName: String
     let link: URL?
     let profileImage: URL?
-    let reputation: Int
+    let reputation: Int?
 }

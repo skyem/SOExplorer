@@ -9,13 +9,16 @@
 import UIKit
 import Reusable
 import SafariServices
+import CocoaLumberjack
 
 class QuestionsTableTableViewController: UITableViewController {
 
     // MARK: - Constants
     
-    let pageLimit = 1
-    let preferredQuestionAmount = 30
+    let pageLimit = 5
+    let preferredQuestionAmount = 80
+    
+    var acceptedAnswersToShow = Set<Int>()
     
     // MARK: - Properties
     
@@ -30,6 +33,15 @@ class QuestionsTableTableViewController: UITableViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.register(cellType: QuestionTableViewCell.self)
     }
+    
+    // MARK: - Utility
+    
+    private func showWebView(for url: URL) {
+        
+        let safariViewController = SFSafariViewController(url: url.absoluteURL)
+        safariViewController.delegate = self
+        present(safariViewController, animated: true, completion: nil)
+    }
 
     // MARK: - Table view data source
 
@@ -42,8 +54,16 @@ class QuestionsTableTableViewController: UITableViewController {
         
         let question = questions[indexPath.row]
         let cell: QuestionTableViewCell = tableView.dequeueReusableCell(for: indexPath)
-        cell.configure(withTitle: question.title, isRead: question.isRead ?? false)
         
+        if let acceptedAnswerID = question.acceptedAnswerId {
+            
+            cell.configure(using: question, shouldShowAcceptedAnswer: acceptedAnswersToShow.contains(acceptedAnswerID))
+        }
+        else {
+            cell.configure(using: question, shouldShowAcceptedAnswer: false)
+        }
+       
+        cell.delegate = self
         return cell
     }
     
@@ -53,11 +73,9 @@ class QuestionsTableTableViewController: UITableViewController {
         question.isRead = true
         tableView.reloadData()
         
-        guard let questionURL = question.link else { return }
+        guard let questionURL = question.link else { DDLogError("No url for question"); showAlert(for: .unableToLoadAnswers); return }
         
-        let safariViewController = SFSafariViewController(url: questionURL.absoluteURL)
-        safariViewController.delegate = self
-        present(safariViewController, animated: true, completion: nil)
+        showWebView(for: questionURL)
     }
 }
 
@@ -66,5 +84,26 @@ extension QuestionsTableTableViewController: SFSafariViewControllerDelegate {
     func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
         
         dismiss(animated: true, completion: nil)
+    }
+}
+
+extension QuestionsTableTableViewController: QuestionCellDelegate {
+    
+    func showAcceptedAnswer(withID identifier: Int, shouldShow: Bool) {
+        
+        if shouldShow {
+            acceptedAnswersToShow.insert(identifier)
+        }
+        else {
+            acceptedAnswersToShow.remove(identifier)
+        }
+        tableView.reloadData()
+    }
+    
+    func showProfile(for owner: Owner) {
+        
+        guard let ownerURL = owner.link else { DDLogError("No url for owner"); showAlert(for: .noProfile); return }
+        
+        showWebView(for: ownerURL)
     }
 }

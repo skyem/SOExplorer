@@ -30,6 +30,8 @@
 		3AAC0B9E20F0569D0049859B /* UIColor+SOExplorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAC0B9D20F0569D0049859B /* UIColor+SOExplorer.swift */; };
 		3AAC0BA220F063660049859B /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAC0BA120F063660049859B /* Storyboards.swift */; };
 		3AAC0BA420F065600049859B /* QuestionsTableViewController+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAC0BA320F065600049859B /* QuestionsTableViewController+Networking.swift */; };
+		3AAC0BA920F26E840049859B /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAC0BA820F26E840049859B /* Alert.swift */; };
+		3AAC0BAB20F2703D0049859B /* UIViewController+SOExplorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAC0BAA20F2703D0049859B /* UIViewController+SOExplorer.swift */; };
 		3AE7895620EEFB0800940850 /* QuestionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE7895520EEFB0800940850 /* QuestionTests.swift */; };
 		3AE7895820EEFB9000940850 /* DataMocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE7895720EEFB9000940850 /* DataMocker.swift */; };
 		3AE7895920EEFB9000940850 /* DataMocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE7895720EEFB9000940850 /* DataMocker.swift */; };
@@ -106,6 +108,8 @@
 		3AAC0B9D20F0569D0049859B /* UIColor+SOExplorer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+SOExplorer.swift"; sourceTree = "<group>"; };
 		3AAC0BA120F063660049859B /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Storyboards.swift; path = SOExplorer/Storyboards.swift; sourceTree = SOURCE_ROOT; };
 		3AAC0BA320F065600049859B /* QuestionsTableViewController+Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuestionsTableViewController+Networking.swift"; sourceTree = "<group>"; };
+		3AAC0BA820F26E840049859B /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		3AAC0BAA20F2703D0049859B /* UIViewController+SOExplorer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+SOExplorer.swift"; sourceTree = "<group>"; };
 		3AE7895520EEFB0800940850 /* QuestionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTests.swift; sourceTree = "<group>"; };
 		3AE7895720EEFB9000940850 /* DataMocker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataMocker.swift; sourceTree = "<group>"; };
 		3AE7895F20EF084000940850 /* questions_response.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = questions_response.json; sourceTree = "<group>"; };
@@ -250,6 +254,7 @@
 			children = (
 				3A4572E120ED25FF00B8A900 /* Constants.swift */,
 				3AAC0BA120F063660049859B /* Storyboards.swift */,
+				3AAC0BA820F26E840049859B /* Alert.swift */,
 				3AAC0B9F20F056A50049859B /* Extensions */,
 				3A4572F420EDA5FC00B8A900 /* Protocols */,
 			);
@@ -294,6 +299,7 @@
 			isa = PBXGroup;
 			children = (
 				3AAC0B9D20F0569D0049859B /* UIColor+SOExplorer.swift */,
+				3AAC0BAA20F2703D0049859B /* UIViewController+SOExplorer.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -607,6 +613,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SOExplorer/Pods-SOExplorer-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
 				"${BUILT_PRODUCTS_DIR}/Reusable/Reusable.framework",
 				"${BUILT_PRODUCTS_DIR}/ThunderCats/ThunderCats.framework",
@@ -614,6 +621,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reusable.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ThunderCats.framework",
@@ -651,6 +659,7 @@
 				3A4572DF20ED25A100B8A900 /* WebService.swift in Sources */,
 				3AAC0BA420F065600049859B /* QuestionsTableViewController+Networking.swift in Sources */,
 				3A4572E620ED273200B8A900 /* WebPath.swift in Sources */,
+				3AAC0BA920F26E840049859B /* Alert.swift in Sources */,
 				3A4572EA20ED590200B8A900 /* WebService+Questions.swift in Sources */,
 				3A4572ED20ED7FBE00B8A900 /* Question.swift in Sources */,
 				3A4572E820ED2F4F00B8A900 /* WebLogging.swift in Sources */,
@@ -662,6 +671,7 @@
 				3A4572F320EDA5F300B8A900 /* SOCodable.swift in Sources */,
 				3A45729D20ED065F00B8A900 /* AppDelegate.swift in Sources */,
 				3A4572E220ED25FF00B8A900 /* Constants.swift in Sources */,
+				3AAC0BAB20F2703D0049859B /* UIViewController+SOExplorer.swift in Sources */,
 				3A8609C620EFAF3300E72349 /* QuestionTableViewCell.swift in Sources */,
 				3AAC0B9E20F0569D0049859B /* UIColor+SOExplorer.swift in Sources */,
 			);
