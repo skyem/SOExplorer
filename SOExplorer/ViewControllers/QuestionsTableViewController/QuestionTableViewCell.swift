@@ -23,7 +23,7 @@ class QuestionTableViewCell: UITableViewCell, NibReusable {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var viewApprovedAnswerView: UIView!
     @IBOutlet weak var approvedAnswerStackView: UIStackView!
-    @IBOutlet weak var viewAnswerButton: UIButton!
+    @IBOutlet weak var showAnswerOwnerButton: UIButton!
     @IBOutlet weak var viewAnswerLabel: UILabel!
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var questionNumberLabel: UILabel!
@@ -45,6 +45,7 @@ class QuestionTableViewCell: UITableViewCell, NibReusable {
         
         self.question = question
         self.shouldShowAcceptedAnswer = shouldShowAcceptedAnswer
+        setUpAccessibility()
         setUpRoundedView()
         setUpQuestionViews(with: question)
         setUpApprovedAnswerView(with: question)
@@ -52,6 +53,12 @@ class QuestionTableViewCell: UITableViewCell, NibReusable {
     }
     
     // MARK: - Setup
+    
+    private func setUpAccessibility() {
+        
+        ownerButton.accessibilityLabel = Constants.Accessibility.QuestionTableViewCell.ownerProfile
+        answerOwnerButton.accessibilityLabel = Constants.Accessibility.QuestionTableViewCell.answerOwnerProfile
+    }
     
     func setUpRoundedView() {
         
@@ -76,6 +83,7 @@ class QuestionTableViewCell: UITableViewCell, NibReusable {
     func setUpApprovedAnswerView(with question: Question) {
         
         viewAnswerLabel.text = shouldShowAcceptedAnswer ? Constants.Questions.hideWhoAnsweredIt : Constants.Questions.showWhoAnsweredIt
+        showAnswerOwnerButton.accessibilityLabel = shouldShowAcceptedAnswer ? Constants.Accessibility.QuestionTableViewCell.hideAnswersOwner : Constants.Accessibility.QuestionTableViewCell.showAnswersOwner
         viewApprovedAnswerView.isHidden = question.acceptedAnswerId == nil
         approvedAnswerStackView.isHidden = !shouldShowAcceptedAnswer
     }
@@ -101,7 +109,7 @@ class QuestionTableViewCell: UITableViewCell, NibReusable {
     
     // MARK: - Actions
     
-    @IBAction func viewQuestionWasTapped(_ sender: UIButton) {
+    @IBAction func showAnswersOwnerWasTapped(_ sender: UIButton) {
         
         guard let acceptedAnswerID = question?.acceptedAnswerId else { assertionFailure("No acceptedAnswerID found in question"); return }
         

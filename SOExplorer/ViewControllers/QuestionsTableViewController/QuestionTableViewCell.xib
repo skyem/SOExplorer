@@ -156,7 +156,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dge-Ov-suA">
                                                 <rect key="frame" x="30" y="13.333333333333346" width="234" height="40.333333333333343"/>
                                                 <connections>
-                                                    <action selector="viewQuestionWasTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="T15-oT-xDn"/>
+                                                    <action selector="showAnswersOwnerWasTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="G4S-q2-FdJ"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -222,7 +222,7 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="274" height="17"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Wg-z7-k9f">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="82.333333333333329" height="17"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="82" height="17"/>
                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     </view>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" text="Reputation:" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q5t-hd-R1s">
@@ -311,11 +311,11 @@
                 <outlet property="ownerButton" destination="mkX-Q2-UyM" id="MvE-TB-2bS"/>
                 <outlet property="questionNumberLabel" destination="IAO-Yr-Le9" id="RD4-Il-fYG"/>
                 <outlet property="roundedView" destination="zgh-17-8Q8" id="a3Z-uj-zXa"/>
+                <outlet property="showAnswerOwnerButton" destination="dge-Ov-suA" id="do9-vH-kZQ"/>
                 <outlet property="tagsLabel" destination="ZuX-yJ-0SN" id="6bG-xC-6vC"/>
                 <outlet property="titleLabel" destination="JTx-LF-SDF" id="0Ex-wg-Hzw"/>
                 <outlet property="userImageView" destination="sET-Ty-dfu" id="sfT-MI-559"/>
                 <outlet property="userNameLabel" destination="V3t-cN-9oO" id="yPH-hP-vXn"/>
-                <outlet property="viewAnswerButton" destination="dge-Ov-suA" id="4TO-Ig-MBo"/>
                 <outlet property="viewAnswerLabel" destination="ug8-FR-8dn" id="5hw-iQ-uwI"/>
                 <outlet property="viewApprovedAnswerView" destination="Wor-rW-adl" id="b7N-rK-MMl"/>
             </connections>

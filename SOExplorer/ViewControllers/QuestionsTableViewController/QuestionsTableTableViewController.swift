@@ -32,6 +32,14 @@ class QuestionsTableTableViewController: UITableViewController {
         loadQuestions()
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.register(cellType: QuestionTableViewCell.self)
+        setUpAccessibility()
+    }
+    
+    // MARK: - Setup
+    
+    func setUpAccessibility() {
+        
+        tableView.accessibilityIdentifier = Constants.Accessibility.QuestionTableViewController.tableView
     }
     
     // MARK: - Utility
