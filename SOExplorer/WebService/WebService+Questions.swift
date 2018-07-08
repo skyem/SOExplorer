@@ -10,8 +10,12 @@ import Foundation
 
 extension WebService {
     
-    static func getQuestions(_ completion: @escaping WebServiceCompletion) {
+    static func getQuestions(forPage page: Int, completion: @escaping WebServiceCompletion) {
         
-        sendJSONRequest(.questions, method: .get, completion: completion)
+        let parameters: JSON = [
+            WebKeys.Core.page: page
+        ]
+        
+        sendJSONRequest(.questions, method: .get, parameters: parameters, headers: nil, completion: completion)
     }
 }

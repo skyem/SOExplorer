@@ -8,4 +8,11 @@
 
 import Foundation
 
-struct Constants {}
+struct Constants {
+    
+    struct Questions {
+        
+        static let showWhoAnsweredIt = "Show Who Answered It"
+        static let hideWhoAnsweredIt = "Hide Who Answered It"
+    }
+}

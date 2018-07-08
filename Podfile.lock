@@ -1,5 +1,7 @@
 PODS:
   - Alamofire (4.7.2)
+  - AlamofireImage (3.3.1):
+    - Alamofire (~> 4.5)
   - CocoaLumberjack/Default (3.4.2)
   - CocoaLumberjack/Swift (3.4.2):
     - CocoaLumberjack/Default
@@ -19,6 +21,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - AlamofireImage
   - CocoaLumberjack/Swift
   - Crashlytics
   - Fabric
@@ -30,6 +33,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - AlamofireImage
     - CocoaLumberjack
     - Crashlytics
     - Fabric
@@ -40,6 +44,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  AlamofireImage: 3b35b586853abaf94ca1250f4e94cff3c21a4c0d
   CocoaLumberjack: db7cc9e464771f12054c22ff6947c5a58d43a0fd
   Crashlytics: 2aea305161a2122492698c75af27f2b98aa49a25
   Fabric: fba4684a95df789565b0b27fc5b6e68f1755af32
@@ -48,6 +53,6 @@ SPEC CHECKSUMS:
   SwiftGen: 4379bd3640b0a212a0f6ea3c494adba385513d10
   ThunderCats: 230e83861086834b920fd1402c2c8a0a5d958247
 
-PODFILE CHECKSUM: 4e9c702dee59bce3d1444d6043700800eba45eb4
+PODFILE CHECKSUM: 7976687c1276ee91fa22713bf7c55660a55eabb2
 
 COCOAPODS: 1.5.3

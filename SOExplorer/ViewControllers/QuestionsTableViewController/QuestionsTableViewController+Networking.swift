@@ -1,21 +1,19 @@
 //
-//  ViewController.swift
+//  QuestionsTableViewController+Networking.swift
 //  SOExplorer
 //
-//  Created by Skye McCaskey on 7/4/18.
+//  Created by Skye McCaskey on 7/6/18.
 //  Copyright © 2018 Skye McCaskey. All rights reserved.
 //
 
-import UIKit
+import Foundation
 import CocoaLumberjack
-import ThunderCats
 
-class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
+extension QuestionsTableTableViewController {
+    
+    func loadQuestions(forPage page: Int = 1) {
         
-        WebService.getQuestions { response in
+        WebService.getQuestions(forPage: page) { response in
             
             switch response.result {
                 
@@ -27,17 +25,26 @@ class ViewController: UIViewController {
             case .success(let json):
                 DDLogDebug("Retrieved questions")
                 guard let questionJSONArray = json[WebKeys.Question.items] as? [JSON] else { DDLogError("Questions array not found"); return }
-
+                
                 do {
                     let questions = try Question.decode(from: questionJSONArray)
-                    DDLogVerbose("Questions: \(questions)")
+                    let filteredQuestions = questions.filter { return $0.isAnswered && $0.answerCount > 1 }
+                    self.questions.append(contentsOf: filteredQuestions)
+                    DDLogDebug("Question count is: \(self.questions.count)")
+                    if self.questions.count < self.preferredQuestionAmount && page < self.pageLimit {
+                        
+                        self.loadQuestions(forPage: page + 1)
+                    }
+                    else {
+                        
+                        self.tableView.reloadData()
+                    }
                 }
                 catch let error {
-    
+                    
                     DDLogError("Unable to decode Questions: \(error.localizedDescription)")
                 }
             }
         }
     }
 }
-

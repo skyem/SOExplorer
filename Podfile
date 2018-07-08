@@ -8,6 +8,7 @@ project 'SOExplorer'
 
 def core_pods
     pod 'Alamofire'
+    pod 'AlamofireImage'
     pod 'Crashlytics'
     pod 'CocoaLumberjack/Swift'
     pod 'Fabric'
