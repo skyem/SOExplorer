@@ -9,7 +9,7 @@
 import Foundation
 import CocoaLumberjack
 
-extension QuestionsTableTableViewController {
+extension QuestionsTableViewController {
     
     func loadQuestions(forPage page: Int = 1) {
         
@@ -19,8 +19,7 @@ extension QuestionsTableTableViewController {
                 
             case .failure(let error):
                 DDLogError("Unable to retrieve questions with error: \(error.localizedDescription)")
-                let alert = UIAlertController.tc_alert(withTitle: "Error Retrieving Questions", message: "An error occured while retrieving the questions. Please try again later.", cancelButtonTitle: "Ok", cancelAction: nil)
-                self.present(alert, animated: true, completion: nil)
+                self.showAlert(for: .errorRetrievingQuestions)
                 
             case .success(let json):
                 DDLogDebug("Retrieved questions")
@@ -28,7 +27,7 @@ extension QuestionsTableTableViewController {
                 
                 do {
                     let questions = try Question.decode(from: questionJSONArray)
-                    let filteredQuestions = questions.filter { return $0.isAnswered && $0.answerCount > 1 }
+                    let filteredQuestions = questions.filter { return $0.acceptedAnswerId != nil && $0.answerCount > 1 }
                     self.questions.append(contentsOf: filteredQuestions)
                     DDLogDebug("Question count is: \(self.questions.count)")
                     if self.questions.count < self.preferredQuestionAmount && page < self.pageLimit {
@@ -37,13 +36,55 @@ extension QuestionsTableTableViewController {
                     }
                     else {
                         
-                        self.tableView.reloadData()
+                        self.loadAcceptedAnswers()
                     }
                 }
                 catch let error {
                     
                     DDLogError("Unable to decode Questions: \(error.localizedDescription)")
                 }
+            }
+        }
+    }
+    
+    func loadAcceptedAnswers() {
+
+        var acceptedAnswerQuestionDictionary: [Int: Question] = [:]
+        
+        for question in questions {
+            
+            guard let acceptedAnswerID = question.acceptedAnswerId else { continue }
+            
+            acceptedAnswerQuestionDictionary[acceptedAnswerID] = question
+        }
+        
+        WebService.getAnswers(withIdentifiers: Array(acceptedAnswerQuestionDictionary.keys)) { response in
+            
+            switch response.result {
+                
+            case .failure(let error):
+                DDLogError("Unable to retrieve questions with error: \(error.localizedDescription)")
+                self.showAlert(for: .errorRetrievingAnswers)
+                
+            case .success(let json):
+                DDLogDebug("Retrieved answers")
+                guard let answerJSONArray = json[WebKeys.Answer.items] as? [JSON] else { DDLogError("Answers array not found"); return }
+                
+                do {
+                    let answers = try Answer.decode(from: answerJSONArray)
+                    DDLogDebug("Answer count is: \(answers.count)")
+                    
+                    for answer in answers {
+                        
+                        acceptedAnswerQuestionDictionary[answer.answerId]?.acceptedAnswer = answer
+                    }
+                }
+                catch let error {
+                    
+                    DDLogError("Unable to decode Answers: \(error.localizedDescription)")
+                }
+                
+                self.tableView.reloadData()
             }
         }
     }

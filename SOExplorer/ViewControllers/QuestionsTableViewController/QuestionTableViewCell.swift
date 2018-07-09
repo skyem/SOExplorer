@@ -13,7 +13,7 @@ import CocoaLumberjack
 
 protocol QuestionCellDelegate: class {
     
-    func showAcceptedAnswer(withID identifier: Int, shouldShow: Bool)
+    func showUserWithAcceptedAnswer(withID identifier: Int, shouldShow: Bool)
     func showProfile(for owner: Owner)
 }
 
@@ -24,7 +24,8 @@ class QuestionTableViewCell: UITableViewCell, NibReusable {
     @IBOutlet weak var viewApprovedAnswerView: UIView!
     @IBOutlet weak var approvedAnswerStackView: UIStackView!
     @IBOutlet weak var showAnswerOwnerButton: UIButton!
-    @IBOutlet weak var viewAnswerLabel: UILabel!
+    @IBOutlet weak var showAnswersLabel: UILabel!
+    @IBOutlet weak var showWhoAnsweredLabel: UILabel!
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var questionNumberLabel: UILabel!
     @IBOutlet weak var userImageView: UIImageView!
@@ -41,10 +42,10 @@ class QuestionTableViewCell: UITableViewCell, NibReusable {
 
     // MARK: - Config
     
-    func configure(using question: Question, shouldShowAcceptedAnswer: Bool) {
+    func configure(using question: Question, shouldShowUserWithAcceptedAnswer: Bool) {
         
         self.question = question
-        self.shouldShowAcceptedAnswer = shouldShowAcceptedAnswer
+        self.shouldShowAcceptedAnswer = shouldShowUserWithAcceptedAnswer
         setUpAccessibility()
         setUpRoundedView()
         setUpQuestionViews(with: question)
@@ -82,7 +83,8 @@ class QuestionTableViewCell: UITableViewCell, NibReusable {
     
     func setUpApprovedAnswerView(with question: Question) {
         
-        viewAnswerLabel.text = shouldShowAcceptedAnswer ? Constants.Questions.hideWhoAnsweredIt : Constants.Questions.showWhoAnsweredIt
+        showWhoAnsweredLabel.text = shouldShowAcceptedAnswer ? Constants.Questions.hideWhoAnsweredIt : Constants.Questions.showWhoAnsweredIt
+        showAnswersLabel.text = "Show All \(question.answerCount) Answers"
         showAnswerOwnerButton.accessibilityLabel = shouldShowAcceptedAnswer ? Constants.Accessibility.QuestionTableViewCell.hideAnswersOwner : Constants.Accessibility.QuestionTableViewCell.showAnswersOwner
         viewApprovedAnswerView.isHidden = question.acceptedAnswerId == nil
         approvedAnswerStackView.isHidden = !shouldShowAcceptedAnswer
@@ -90,15 +92,15 @@ class QuestionTableViewCell: UITableViewCell, NibReusable {
     
     func setUpAnsweringUserViews(with question: Question) {
         
-        guard shouldShowAcceptedAnswer else { return }
+        guard let acceptedAnswer = question.acceptedAnswer, shouldShowAcceptedAnswer else { return }
         
-        answeringUserLabel.text = question.owner.displayName
+        answeringUserLabel.text = acceptedAnswer.owner.displayName
         
-        guard let userImageURL = question.owner.profileImage else { return }
+        guard let userImageURL = acceptedAnswer.owner.profileImage else { return }
         
         answeringUserImageView.af_setImage(withURL: userImageURL)
         
-        guard let reputation = question.owner.reputation else {
+        guard let reputation = acceptedAnswer.owner.reputation else {
             
             answeringUserReputationLabel.text = "Unknown"
             return
@@ -112,8 +114,8 @@ class QuestionTableViewCell: UITableViewCell, NibReusable {
     @IBAction func showAnswersOwnerWasTapped(_ sender: UIButton) {
         
         guard let acceptedAnswerID = question?.acceptedAnswerId else { assertionFailure("No acceptedAnswerID found in question"); return }
-        
-        delegate?.showAcceptedAnswer(withID: acceptedAnswerID, shouldShow: !shouldShowAcceptedAnswer)
+    
+        delegate?.showUserWithAcceptedAnswer(withID: acceptedAnswerID, shouldShow: !shouldShowAcceptedAnswer)
     }
     
     @IBAction func ownerButtonWasTapped(_ sender: UIButton) {
@@ -125,8 +127,8 @@ class QuestionTableViewCell: UITableViewCell, NibReusable {
     
     @IBAction func answerOwnerButtonWasTapped(_ sender: UIButton) {
         
-        guard let question = question else { DDLogError("No question found"); return }
+        guard let acceptedAnswer = question?.acceptedAnswer else { DDLogError("No question found"); return }
         
-        delegate?.showProfile(for: question.owner)
+        delegate?.showProfile(for: acceptedAnswer.owner)
     }
 }

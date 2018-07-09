@@ -11,7 +11,6 @@
 		3A4572A220ED065F00B8A900 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A4572A020ED065F00B8A900 /* Main.storyboard */; };
 		3A4572A420ED066100B8A900 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A4572A320ED066100B8A900 /* Assets.xcassets */; };
 		3A4572A720ED066100B8A900 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A4572A520ED066100B8A900 /* LaunchScreen.storyboard */; };
-		3A4572BD20ED066100B8A900 /* SOExplorerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4572BC20ED066100B8A900 /* SOExplorerUITests.swift */; };
 		3A4572CB20ED06FC00B8A900 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 3A4572CA20ED06FC00B8A900 /* Podfile */; };
 		3A4572D420ED1B7100B8A900 /* SOExplorerKIFTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4572D320ED1B7100B8A900 /* SOExplorerKIFTests.swift */; };
 		3A4572DF20ED25A100B8A900 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4572DE20ED25A100B8A900 /* WebService.swift */; };
@@ -23,8 +22,12 @@
 		3A4572ED20ED7FBE00B8A900 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4572EC20ED7FBE00B8A900 /* Question.swift */; };
 		3A4572F120EDA19A00B8A900 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4572F020EDA19A00B8A900 /* Owner.swift */; };
 		3A4572F320EDA5F300B8A900 /* SOCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4572F220EDA5F300B8A900 /* SOCodable.swift */; };
+		3A6C1DCD20F2C94D0083FAD6 /* AnswerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6C1DCC20F2C94D0083FAD6 /* AnswerTests.swift */; };
+		3A6C1DCF20F2CA4E0083FAD6 /* answers_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A6C1DCE20F2CA4E0083FAD6 /* answers_response.json */; };
+		3A6C1DD120F2CA4E0083FAD6 /* answers_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A6C1DCE20F2CA4E0083FAD6 /* answers_response.json */; };
+		3A6C1DD320F2CF800083FAD6 /* QuestionsTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6C1DD220F2CF800083FAD6 /* QuestionsTableViewControllerTests.swift */; };
 		3A8609C120EFAC1A00E72349 /* BrowsingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8609C020EFAC1A00E72349 /* BrowsingViewController.swift */; };
-		3A8609C320EFAE9F00E72349 /* QuestionsTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8609C220EFAE9F00E72349 /* QuestionsTableTableViewController.swift */; };
+		3A8609C320EFAE9F00E72349 /* QuestionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8609C220EFAE9F00E72349 /* QuestionsTableViewController.swift */; };
 		3A8609C620EFAF3300E72349 /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8609C420EFAF3300E72349 /* QuestionTableViewCell.swift */; };
 		3A8609C720EFAF3300E72349 /* QuestionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A8609C520EFAF3300E72349 /* QuestionTableViewCell.xib */; };
 		3AAC0B9E20F0569D0049859B /* UIColor+SOExplorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAC0B9D20F0569D0049859B /* UIColor+SOExplorer.swift */; };
@@ -32,30 +35,24 @@
 		3AAC0BA420F065600049859B /* QuestionsTableViewController+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAC0BA320F065600049859B /* QuestionsTableViewController+Networking.swift */; };
 		3AAC0BA920F26E840049859B /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAC0BA820F26E840049859B /* Alert.swift */; };
 		3AAC0BAB20F2703D0049859B /* UIViewController+SOExplorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAC0BAA20F2703D0049859B /* UIViewController+SOExplorer.swift */; };
+		3AE350C020F304AC00184938 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE350BE20F304AC00184938 /* WebViewController.swift */; };
+		3AE350C120F304AC00184938 /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AE350BF20F304AC00184938 /* WebViewController.xib */; };
 		3AE7895620EEFB0800940850 /* QuestionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE7895520EEFB0800940850 /* QuestionTests.swift */; };
 		3AE7895820EEFB9000940850 /* DataMocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE7895720EEFB9000940850 /* DataMocker.swift */; };
-		3AE7895920EEFB9000940850 /* DataMocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE7895720EEFB9000940850 /* DataMocker.swift */; };
 		3AE7895A20EEFB9000940850 /* DataMocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE7895720EEFB9000940850 /* DataMocker.swift */; };
 		3AE7896020EF0A3D00940850 /* questions_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AE7895F20EF084000940850 /* questions_response.json */; };
-		3AE7896120EF0A3E00940850 /* questions_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AE7895F20EF084000940850 /* questions_response.json */; };
 		3AE7896220EF0A3E00940850 /* questions_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AE7895F20EF084000940850 /* questions_response.json */; };
 		3AF491B420F29DDE00DB1B3B /* KIFUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF491B320F29DDE00DB1B3B /* KIFUtility.swift */; };
 		3AF491B620F29F0900DB1B3B /* AccessibilityConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF491B520F29F0900DB1B3B /* AccessibilityConstants.swift */; };
+		3AF491B820F2B09500DB1B3B /* WebService+Answers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF491B720F2B09500DB1B3B /* WebService+Answers.swift */; };
+		3AF491BA20F2B76D00DB1B3B /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF491B920F2B76D00DB1B3B /* Answer.swift */; };
 		7DCF3892A6F6E060F00FACF3 /* Pods_SOExplorerKIFTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA5C49D0DA68E0C54A6A01F /* Pods_SOExplorerKIFTests.framework */; };
 		B69199640368162F776913F3 /* Pods_SOExplorerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2044BEF04B47A667E38530F /* Pods_SOExplorerTests.framework */; };
 		C4A7ABD765A8969B407DA381 /* Pods_SOExplorer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E09E58BB12C297DCD3A38D5A /* Pods_SOExplorer.framework */; };
-		CBBF91245046597E5B926BCE /* Pods_SOExplorerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 805931E38EE1B0DED4A4322F /* Pods_SOExplorerUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		3A4572AE20ED066100B8A900 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3A45729120ED065F00B8A900 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3A45729820ED065F00B8A900;
-			remoteInfo = SOExplorer;
-		};
-		3A4572B920ED066100B8A900 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3A45729120ED065F00B8A900 /* Project object */;
 			proxyType = 1;
@@ -85,7 +82,6 @@
 		3A4572A820ED066100B8A900 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A4572AD20ED066100B8A900 /* SOExplorerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SOExplorerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A4572B320ED066100B8A900 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3A4572B820ED066100B8A900 /* SOExplorerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SOExplorerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A4572BC20ED066100B8A900 /* SOExplorerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOExplorerUITests.swift; sourceTree = "<group>"; };
 		3A4572BE20ED066100B8A900 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A4572CA20ED06FC00B8A900 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = Podfile; sourceTree = "<group>"; };
@@ -103,8 +99,11 @@
 		3A4572EC20ED7FBE00B8A900 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		3A4572F020EDA19A00B8A900 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		3A4572F220EDA5F300B8A900 /* SOCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOCodable.swift; sourceTree = "<group>"; };
+		3A6C1DCC20F2C94D0083FAD6 /* AnswerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerTests.swift; sourceTree = "<group>"; };
+		3A6C1DCE20F2CA4E0083FAD6 /* answers_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = answers_response.json; path = ../../../../Users/skyemccaskey/Documents/answers_response.json; sourceTree = "<group>"; };
+		3A6C1DD220F2CF800083FAD6 /* QuestionsTableViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsTableViewControllerTests.swift; sourceTree = "<group>"; };
 		3A8609C020EFAC1A00E72349 /* BrowsingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowsingViewController.swift; sourceTree = "<group>"; };
-		3A8609C220EFAE9F00E72349 /* QuestionsTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsTableTableViewController.swift; sourceTree = "<group>"; };
+		3A8609C220EFAE9F00E72349 /* QuestionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsTableViewController.swift; sourceTree = "<group>"; };
 		3A8609C420EFAF3300E72349 /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
 		3A8609C520EFAF3300E72349 /* QuestionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionTableViewCell.xib; sourceTree = "<group>"; };
 		3AAC0B9D20F0569D0049859B /* UIColor+SOExplorer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+SOExplorer.swift"; sourceTree = "<group>"; };
@@ -112,11 +111,15 @@
 		3AAC0BA320F065600049859B /* QuestionsTableViewController+Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuestionsTableViewController+Networking.swift"; sourceTree = "<group>"; };
 		3AAC0BA820F26E840049859B /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		3AAC0BAA20F2703D0049859B /* UIViewController+SOExplorer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+SOExplorer.swift"; sourceTree = "<group>"; };
+		3AE350BE20F304AC00184938 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		3AE350BF20F304AC00184938 /* WebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
 		3AE7895520EEFB0800940850 /* QuestionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTests.swift; sourceTree = "<group>"; };
 		3AE7895720EEFB9000940850 /* DataMocker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataMocker.swift; sourceTree = "<group>"; };
 		3AE7895F20EF084000940850 /* questions_response.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = questions_response.json; sourceTree = "<group>"; };
 		3AF491B320F29DDE00DB1B3B /* KIFUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KIFUtility.swift; sourceTree = "<group>"; };
 		3AF491B520F29F0900DB1B3B /* AccessibilityConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityConstants.swift; sourceTree = "<group>"; };
+		3AF491B720F2B09500DB1B3B /* WebService+Answers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WebService+Answers.swift"; sourceTree = "<group>"; };
+		3AF491B920F2B76D00DB1B3B /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 		67178901457916735BE1AFC9 /* Pods-SOExplorer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOExplorer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SOExplorer/Pods-SOExplorer.debug.xcconfig"; sourceTree = "<group>"; };
 		805931E38EE1B0DED4A4322F /* Pods_SOExplorerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SOExplorerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2044BEF04B47A667E38530F /* Pods_SOExplorerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SOExplorerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,14 +143,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B69199640368162F776913F3 /* Pods_SOExplorerTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3A4572B520ED066100B8A900 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CBBF91245046597E5B926BCE /* Pods_SOExplorerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,7 +176,6 @@
 			children = (
 				3A45729920ED065F00B8A900 /* SOExplorer.app */,
 				3A4572AD20ED066100B8A900 /* SOExplorerTests.xctest */,
-				3A4572B820ED066100B8A900 /* SOExplorerUITests.xctest */,
 				3A4572D120ED1B7100B8A900 /* SOExplorerKIFTests.xctest */,
 			);
 			name = Products;
@@ -207,6 +201,8 @@
 			isa = PBXGroup;
 			children = (
 				3AE7895520EEFB0800940850 /* QuestionTests.swift */,
+				3A6C1DCC20F2C94D0083FAD6 /* AnswerTests.swift */,
+				3A6C1DD220F2CF800083FAD6 /* QuestionsTableViewControllerTests.swift */,
 				3AE7896320EF0DF800940850 /* DataMocking */,
 				3A4572B320ED066100B8A900 /* Info.plist */,
 			);
@@ -247,6 +243,7 @@
 			children = (
 				3A4572DE20ED25A100B8A900 /* WebService.swift */,
 				3A4572E920ED590200B8A900 /* WebService+Questions.swift */,
+				3AF491B720F2B09500DB1B3B /* WebService+Answers.swift */,
 				3A4572E320ED269800B8A900 /* Constants+WebKeys.swift */,
 				3A4572E520ED273200B8A900 /* WebPath.swift */,
 				3A4572E720ED2F4F00B8A900 /* WebLogging.swift */,
@@ -270,6 +267,7 @@
 		3A4572EB20ED7F9A00B8A900 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3AF491B920F2B76D00DB1B3B /* Answer.swift */,
 				3A4572EC20ED7FBE00B8A900 /* Question.swift */,
 				3A4572F020EDA19A00B8A900 /* Owner.swift */,
 			);
@@ -289,6 +287,7 @@
 			children = (
 				3A8609C020EFAC1A00E72349 /* BrowsingViewController.swift */,
 				3AAC0BA520F077C60049859B /* QuestionsTableViewController */,
+				3AE350C220F304BC00184938 /* WebViewController */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -313,7 +312,7 @@
 		3AAC0BA520F077C60049859B /* QuestionsTableViewController */ = {
 			isa = PBXGroup;
 			children = (
-				3A8609C220EFAE9F00E72349 /* QuestionsTableTableViewController.swift */,
+				3A8609C220EFAE9F00E72349 /* QuestionsTableViewController.swift */,
 				3AAC0BA320F065600049859B /* QuestionsTableViewController+Networking.swift */,
 				3A8609C420EFAF3300E72349 /* QuestionTableViewCell.swift */,
 				3A8609C520EFAF3300E72349 /* QuestionTableViewCell.xib */,
@@ -321,10 +320,20 @@
 			path = QuestionsTableViewController;
 			sourceTree = "<group>";
 		};
+		3AE350C220F304BC00184938 /* WebViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3AE350BE20F304AC00184938 /* WebViewController.swift */,
+				3AE350BF20F304AC00184938 /* WebViewController.xib */,
+			);
+			path = WebViewController;
+			sourceTree = "<group>";
+		};
 		3AE7896320EF0DF800940850 /* DataMocking */ = {
 			isa = PBXGroup;
 			children = (
 				3AE7895720EEFB9000940850 /* DataMocker.swift */,
+				3A6C1DCE20F2CA4E0083FAD6 /* answers_response.json */,
 				3AE7895F20EF084000940850 /* questions_response.json */,
 			);
 			path = DataMocking;
@@ -398,25 +407,6 @@
 			productReference = 3A4572AD20ED066100B8A900 /* SOExplorerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		3A4572B720ED066100B8A900 /* SOExplorerUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3A4572C720ED066100B8A900 /* Build configuration list for PBXNativeTarget "SOExplorerUITests" */;
-			buildPhases = (
-				2828C133955B2A620ED623DD /* [CP] Check Pods Manifest.lock */,
-				3A4572B420ED066100B8A900 /* Sources */,
-				3A4572B520ED066100B8A900 /* Frameworks */,
-				3A4572B620ED066100B8A900 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3A4572BA20ED066100B8A900 /* PBXTargetDependency */,
-			);
-			name = SOExplorerUITests;
-			productName = SOExplorerUITests;
-			productReference = 3A4572B820ED066100B8A900 /* SOExplorerUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 		3A4572D020ED1B7100B8A900 /* SOExplorerKIFTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3A4572D820ED1B7100B8A900 /* Build configuration list for PBXNativeTarget "SOExplorerKIFTests" */;
@@ -454,10 +444,6 @@
 						CreatedOnToolsVersion = 9.4.1;
 						TestTargetID = 3A45729820ED065F00B8A900;
 					};
-					3A4572B720ED066100B8A900 = {
-						CreatedOnToolsVersion = 9.4.1;
-						TestTargetID = 3A45729820ED065F00B8A900;
-					};
 					3A4572D020ED1B7100B8A900 = {
 						CreatedOnToolsVersion = 9.4.1;
 						TestTargetID = 3A45729820ED065F00B8A900;
@@ -479,7 +465,6 @@
 			targets = (
 				3A45729820ED065F00B8A900 /* SOExplorer */,
 				3A4572AC20ED066100B8A900 /* SOExplorerTests */,
-				3A4572B720ED066100B8A900 /* SOExplorerUITests */,
 				3A4572D020ED1B7100B8A900 /* SOExplorerKIFTests */,
 			);
 		};
@@ -493,6 +478,7 @@
 				3A4572A720ED066100B8A900 /* LaunchScreen.storyboard in Resources */,
 				3A4572A420ED066100B8A900 /* Assets.xcassets in Resources */,
 				3A4572CB20ED06FC00B8A900 /* Podfile in Resources */,
+				3AE350C120F304AC00184938 /* WebViewController.xib in Resources */,
 				3A8609C720EFAF3300E72349 /* QuestionTableViewCell.xib in Resources */,
 				3A4572A220ED065F00B8A900 /* Main.storyboard in Resources */,
 			);
@@ -502,15 +488,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A6C1DCF20F2CA4E0083FAD6 /* answers_response.json in Resources */,
 				3AE7896020EF0A3D00940850 /* questions_response.json in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3A4572B620ED066100B8A900 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3AE7896120EF0A3E00940850 /* questions_response.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,6 +497,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A6C1DD120F2CA4E0083FAD6 /* answers_response.json in Resources */,
 				3AE7896220EF0A3E00940850 /* questions_response.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -537,24 +517,6 @@
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-SOExplorerTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2828C133955B2A620ED623DD /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SOExplorerUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -663,8 +625,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A4572DF20ED25A100B8A900 /* WebService.swift in Sources */,
+				3AE350C020F304AC00184938 /* WebViewController.swift in Sources */,
 				3AAC0BA420F065600049859B /* QuestionsTableViewController+Networking.swift in Sources */,
 				3A4572E620ED273200B8A900 /* WebPath.swift in Sources */,
+				3AF491BA20F2B76D00DB1B3B /* Answer.swift in Sources */,
 				3AAC0BA920F26E840049859B /* Alert.swift in Sources */,
 				3A4572EA20ED590200B8A900 /* WebService+Questions.swift in Sources */,
 				3A4572ED20ED7FBE00B8A900 /* Question.swift in Sources */,
@@ -672,8 +636,9 @@
 				3A8609C120EFAC1A00E72349 /* BrowsingViewController.swift in Sources */,
 				3A4572E420ED269800B8A900 /* Constants+WebKeys.swift in Sources */,
 				3AAC0BA220F063660049859B /* Storyboards.swift in Sources */,
-				3A8609C320EFAE9F00E72349 /* QuestionsTableTableViewController.swift in Sources */,
+				3A8609C320EFAE9F00E72349 /* QuestionsTableViewController.swift in Sources */,
 				3A4572F120EDA19A00B8A900 /* Owner.swift in Sources */,
+				3AF491B820F2B09500DB1B3B /* WebService+Answers.swift in Sources */,
 				3AF491B620F29F0900DB1B3B /* AccessibilityConstants.swift in Sources */,
 				3A4572F320EDA5F300B8A900 /* SOCodable.swift in Sources */,
 				3A45729D20ED065F00B8A900 /* AppDelegate.swift in Sources */,
@@ -688,17 +653,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A6C1DCD20F2C94D0083FAD6 /* AnswerTests.swift in Sources */,
 				3AE7895620EEFB0800940850 /* QuestionTests.swift in Sources */,
 				3AE7895820EEFB9000940850 /* DataMocker.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3A4572B420ED066100B8A900 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3AE7895920EEFB9000940850 /* DataMocker.swift in Sources */,
-				3A4572BD20ED066100B8A900 /* SOExplorerUITests.swift in Sources */,
+				3A6C1DD320F2CF800083FAD6 /* QuestionsTableViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -719,11 +677,6 @@
 			isa = PBXTargetDependency;
 			target = 3A45729820ED065F00B8A900 /* SOExplorer */;
 			targetProxy = 3A4572AE20ED066100B8A900 /* PBXContainerItemProxy */;
-		};
-		3A4572BA20ED066100B8A900 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3A45729820ED065F00B8A900 /* SOExplorer */;
-			targetProxy = 3A4572B920ED066100B8A900 /* PBXContainerItemProxy */;
 		};
 		3A4572D720ED1B7100B8A900 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -948,48 +901,6 @@
 			};
 			name = Release;
 		};
-		3A4572C820ED066100B8A900 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A65D0A53B2A63B4C06466E3F /* Pods-SOExplorerUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 666KE6T99G;
-				INFOPLIST_FILE = SOExplorerUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.skyemccaskey.SOExplorerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = SOExplorer;
-			};
-			name = Debug;
-		};
-		3A4572C920ED066100B8A900 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BF267B9C4DB573CEEE3177D8 /* Pods-SOExplorerUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 666KE6T99G;
-				INFOPLIST_FILE = SOExplorerUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.skyemccaskey.SOExplorerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = SOExplorer;
-			};
-			name = Release;
-		};
 		3A4572D920ED1B7100B8A900 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 14C876E49E8DCAEDF07A12D5 /* Pods-SOExplorerKIFTests.debug.xcconfig */;
@@ -1058,15 +969,6 @@
 			buildConfigurations = (
 				3A4572C520ED066100B8A900 /* Debug */,
 				3A4572C620ED066100B8A900 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3A4572C720ED066100B8A900 /* Build configuration list for PBXNativeTarget "SOExplorerUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3A4572C820ED066100B8A900 /* Debug */,
-				3A4572C920ED066100B8A900 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -19,5 +19,6 @@ final class Question: SOCodable {
     let questionId: Int
     let tags: [String]
     let title: String
+    var acceptedAnswer: Answer?
     var isRead: Bool? = false
 }

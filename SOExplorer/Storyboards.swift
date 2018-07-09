@@ -58,7 +58,9 @@ internal enum StoryboardScene {
   internal enum Main: StoryboardType {
     internal static let storyboardName = "Main"
 
-    internal static let initialScene = InitialSceneType<SOExplorer.BrowsingViewController>(storyboard: Main.self)
+    internal static let initialScene = InitialSceneType<UINavigationController>(storyboard: Main.self)
+
+    internal static let questionsTableView = SceneType<SOExplorer.QuestionsTableViewController>(storyboard: Main.self, identifier: "QuestionsTableView")
   }
 }
 

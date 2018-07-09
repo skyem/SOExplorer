@@ -11,8 +11,8 @@ import Reusable
 import SafariServices
 import CocoaLumberjack
 
-class QuestionsTableTableViewController: UITableViewController {
-
+class QuestionsTableViewController: UITableViewController {
+    
     // MARK: - Constants
     
     let pageLimit = 5
@@ -44,11 +44,10 @@ class QuestionsTableTableViewController: UITableViewController {
     
     // MARK: - Utility
     
-    private func showWebView(for url: URL) {
+    private func showWebView(for url: URL, title: String) {
         
-        let safariViewController = SFSafariViewController(url: url.absoluteURL)
-        safariViewController.delegate = self
-        present(safariViewController, animated: true, completion: nil)
+        let webViewController = WebViewController(url: url, title: title)
+        show(webViewController, sender: nil)
     }
 
     // MARK: - Table view data source
@@ -65,14 +64,19 @@ class QuestionsTableTableViewController: UITableViewController {
         
         if let acceptedAnswerID = question.acceptedAnswerId {
             
-            cell.configure(using: question, shouldShowAcceptedAnswer: acceptedAnswersToShow.contains(acceptedAnswerID))
+            cell.configure(using: question, shouldShowUserWithAcceptedAnswer: acceptedAnswersToShow.contains(acceptedAnswerID))
         }
         else {
-            cell.configure(using: question, shouldShowAcceptedAnswer: false)
+            cell.configure(using: question, shouldShowUserWithAcceptedAnswer: false)
         }
        
         cell.delegate = self
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        return 336
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -83,11 +87,11 @@ class QuestionsTableTableViewController: UITableViewController {
         
         guard let questionURL = question.link else { DDLogError("No url for question"); showAlert(for: .unableToLoadAnswers); return }
         
-        showWebView(for: questionURL)
+        showWebView(for: questionURL, title: "Question")
     }
 }
 
-extension QuestionsTableTableViewController: SFSafariViewControllerDelegate {
+extension QuestionsTableViewController: SFSafariViewControllerDelegate {
     
     func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
         
@@ -95,9 +99,9 @@ extension QuestionsTableTableViewController: SFSafariViewControllerDelegate {
     }
 }
 
-extension QuestionsTableTableViewController: QuestionCellDelegate {
+extension QuestionsTableViewController: QuestionCellDelegate {
     
-    func showAcceptedAnswer(withID identifier: Int, shouldShow: Bool) {
+    func showUserWithAcceptedAnswer(withID identifier: Int, shouldShow: Bool) {
         
         if shouldShow {
             acceptedAnswersToShow.insert(identifier)
@@ -105,6 +109,7 @@ extension QuestionsTableTableViewController: QuestionCellDelegate {
         else {
             acceptedAnswersToShow.remove(identifier)
         }
+        
         tableView.reloadData()
     }
     
@@ -112,6 +117,6 @@ extension QuestionsTableTableViewController: QuestionCellDelegate {
         
         guard let ownerURL = owner.link else { DDLogError("No url for owner"); showAlert(for: .noProfile); return }
         
-        showWebView(for: ownerURL)
+        showWebView(for: ownerURL, title: "Profile")
     }
 }
