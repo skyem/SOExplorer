@@ -1,0 +1,750 @@
+{
+  "items": [
+    {
+      "tags": [
+        "javascript",
+        "arrays",
+        "ecmascript-6",
+        "javascript-objects"
+      ],
+      "owner": {
+        "reputation": 313,
+        "user_id": 1257084,
+        "user_type": "registered",
+        "accept_rate": 63,
+        "profile_image": "https://www.gravatar.com/avatar/8ce8c00a894c374a59c10c9eaa09c462?s=128&d=identicon&r=PG",
+        "display_name": "Robert",
+        "link": "https://stackoverflow.com/users/1257084/robert"
+      },
+      "is_answered": false,
+      "view_count": 1,
+      "answer_count": 0,
+      "score": 0,
+      "last_activity_date": 1530719639,
+      "creation_date": 1530719639,
+      "question_id": 51177388,
+      "link": "https://stackoverflow.com/questions/51177388/how-to-modify-an-array-of-objects-to-group-by-most-recent-year",
+      "title": "How to modify an array of objects to group by most recent year?"
+    },
+    {
+      "tags": [
+        "ios",
+        "swift",
+        "uinavigationbar",
+        "ios11",
+        "uisearchcontroller"
+      ],
+      "owner": {
+        "reputation": 1080,
+        "user_id": 5234637,
+        "user_type": "registered",
+        "accept_rate": 25,
+        "profile_image": "https://www.gravatar.com/avatar/f09d3ddade1bf8745f1436e424e85c5b?s=128&d=identicon&r=PG&f=1",
+        "display_name": "Ajay Kumar",
+        "link": "https://stackoverflow.com/users/5234637/ajay-kumar"
+      },
+      "is_answered": false,
+      "view_count": 1,
+      "answer_count": 0,
+      "score": 0,
+      "last_activity_date": 1530719637,
+      "creation_date": 1530719637,
+      "question_id": 51177387,
+      "link": "https://stackoverflow.com/questions/51177387/search-bar-not-showing-up-on-the-navigation-bar-ios-11",
+      "title": "Search bar not showing up on the navigation bar iOS 11"
+    },
+    {
+      "tags": [
+        "python-3.x",
+        "beautifulsoup",
+        "python-requests",
+        "urllib",
+        "urlretrieve"
+      ],
+      "owner": {
+        "reputation": 1,
+        "user_id": 7732151,
+        "user_type": "registered",
+        "profile_image": "https://graph.facebook.com/1403989616330918/picture?type=large",
+        "display_name": "Saurav Hiremath",
+        "link": "https://stackoverflow.com/users/7732151/saurav-hiremath"
+      },
+      "is_answered": false,
+      "view_count": 10,
+      "answer_count": 0,
+      "score": -3,
+      "last_activity_date": 1530719634,
+      "creation_date": 1530370636,
+      "last_edit_date": 1530719634,
+      "question_id": 51116006,
+      "link": "https://stackoverflow.com/questions/51116006/downloading-large-files-through-urlretrieve",
+      "title": "Downloading Large Files through urlretrieve"
+    },
+    {
+      "tags": [
+        "sql",
+        "sql-server"
+      ],
+      "owner": {
+        "reputation": 40,
+        "user_id": 4339842,
+        "user_type": "registered",
+        "profile_image": "https://graph.facebook.com/100005503931777/picture?type=large",
+        "display_name": "Dũng Kon",
+        "link": "https://stackoverflow.com/users/4339842/d%c5%a9ng-kon"
+      },
+      "is_answered": false,
+      "view_count": 14,
+      "answer_count": 0,
+      "score": 0,
+      "last_activity_date": 1530719634,
+      "creation_date": 1530718365,
+      "last_edit_date": 1530719634,
+      "question_id": 51177072,
+      "link": "https://stackoverflow.com/questions/51177072/select-many-to-many-with-hierarchical-table",
+      "title": "Select many to many with hierarchical table"
+    },
+    {
+      "tags": [
+        "python",
+        "id"
+      ],
+      "owner": {
+        "reputation": 1,
+        "user_id": 10032990,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/9c387950f9dbddd2b82906a53bff0e6d?s=128&d=identicon&r=PG&f=1",
+        "display_name": "Alex V",
+        "link": "https://stackoverflow.com/users/10032990/alex-v"
+      },
+      "is_answered": false,
+      "view_count": 25,
+      "answer_count": 2,
+      "score": 0,
+      "last_activity_date": 1530719630,
+      "creation_date": 1530718600,
+      "last_edit_date": 1530718785,
+      "question_id": 51177119,
+      "link": "https://stackoverflow.com/questions/51177119/what-exactly-is-id-displaying",
+      "title": "What exactly is id() displaying?"
+    },
+    {
+      "tags": [
+        "excel",
+        "google-sheets-api"
+      ],
+      "owner": {
+        "reputation": 1,
+        "user_id": 10033072,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/c030199efe03a11baef368e7ebbe26be?s=128&d=identicon&r=PG&f=1",
+        "display_name": "jules c",
+        "link": "https://stackoverflow.com/users/10033072/jules-c"
+      },
+      "is_answered": false,
+      "view_count": 2,
+      "answer_count": 0,
+      "score": 0,
+      "last_activity_date": 1530719630,
+      "creation_date": 1530719630,
+      "question_id": 51177385,
+      "link": "https://stackoverflow.com/questions/51177385/exporting-a-google-sheet-into-an-excel-using-google-script",
+      "title": "Exporting a Google Sheet into an Excel using Google script"
+    },
+    {
+      "tags": [
+        "asp.net",
+        "asp.net-mvc",
+        "azure",
+        "azure-web-sites",
+        "nuget-server"
+      ],
+      "owner": {
+        "reputation": 16,
+        "user_id": 2566927,
+        "user_type": "registered",
+        "profile_image": "https://graph.facebook.com/656642456/picture?type=large",
+        "display_name": "George Roberts",
+        "link": "https://stackoverflow.com/users/2566927/george-roberts"
+      },
+      "is_answered": false,
+      "view_count": 218,
+      "answer_count": 2,
+      "score": 1,
+      "last_activity_date": 1530719630,
+      "creation_date": 1516180265,
+      "question_id": 48297339,
+      "link": "https://stackoverflow.com/questions/48297339/not-enough-storage-is-available-to-complete-this-operation-azure-app-service",
+      "title": "Not enough storage is available to complete this operation - Azure App Service, Nuget.Server"
+    },
+    {
+      "tags": [
+        "django-rest-framework"
+      ],
+      "owner": {
+        "reputation": 511,
+        "user_id": 7708172,
+        "user_type": "registered",
+        "accept_rate": 89,
+        "profile_image": "https://www.gravatar.com/avatar/0a1391608ec363f667a42f2e4fedb75d?s=128&d=identicon&r=PG&f=1",
+        "display_name": "Dalvtor",
+        "link": "https://stackoverflow.com/users/7708172/dalvtor"
+      },
+      "is_answered": false,
+      "view_count": 2,
+      "answer_count": 0,
+      "score": 0,
+      "last_activity_date": 1530719628,
+      "creation_date": 1530719628,
+      "question_id": 51177383,
+      "link": "https://stackoverflow.com/questions/51177383/django-rest-framework-next-link-points-to-aws",
+      "title": "Django rest framework next link points to AWS"
+    },
+    {
+      "tags": [
+        "python",
+        "numpy"
+      ],
+      "owner": {
+        "reputation": 533,
+        "user_id": 1245175,
+        "user_type": "registered",
+        "accept_rate": 57,
+        "profile_image": "https://i.stack.imgur.com/8OhG9.jpg?s=128&g=1",
+        "display_name": "ady",
+        "link": "https://stackoverflow.com/users/1245175/ady"
+      },
+      "is_answered": false,
+      "view_count": 20,
+      "answer_count": 1,
+      "score": 0,
+      "last_activity_date": 1530719624,
+      "creation_date": 1530717458,
+      "last_edit_date": 1530717565,
+      "question_id": 51176843,
+      "link": "https://stackoverflow.com/questions/51176843/why-do-we-get-such-a-result-for-double-boolean-indexing-in-python",
+      "title": "Why do we get such a result for double boolean indexing in Python?"
+    },
+    {
+      "tags": [
+        "python",
+        "list",
+        "mpi"
+      ],
+      "owner": {
+        "reputation": 494,
+        "user_id": 5313508,
+        "user_type": "registered",
+        "accept_rate": 67,
+        "profile_image": "https://www.gravatar.com/avatar/cc324fd94b4258a000a5aa5e79da99a5?s=128&d=identicon&r=PG&f=1",
+        "display_name": "P-M",
+        "link": "https://stackoverflow.com/users/5313508/p-m"
+      },
+      "is_answered": false,
+      "view_count": 5,
+      "answer_count": 1,
+      "score": 0,
+      "last_activity_date": 1530719623,
+      "creation_date": 1530718305,
+      "question_id": 51177055,
+      "link": "https://stackoverflow.com/questions/51177055/most-efficent-way-to-assign-lists-of-irregular-length-to-sub-processes-for-proce",
+      "title": "Most efficent way to assign lists of irregular length to sub-processes for processing"
+    },
+    {
+      "tags": [
+        "c#",
+        "azure-web-sites",
+        "dotnet-httpclient",
+        "http2"
+      ],
+      "owner": {
+        "reputation": 2124,
+        "user_id": 1350742,
+        "user_type": "registered",
+        "accept_rate": 90,
+        "profile_image": "https://i.stack.imgur.com/4eKx5.jpg?s=128&g=1",
+        "display_name": "Jakub Holovsky",
+        "link": "https://stackoverflow.com/users/1350742/jakub-holovsky"
+      },
+      "is_answered": false,
+      "view_count": 3,
+      "answer_count": 0,
+      "score": 0,
+      "last_activity_date": 1530719620,
+      "creation_date": 1530719620,
+      "question_id": 51177381,
+      "link": "https://stackoverflow.com/questions/51177381/httpclient-only-http-1-0-and-http-1-1-version-requests-are-currently-supported",
+      "title": "HttpClient - Only HTTP/1.0 and HTTP/1.1 version requests are currently supported. Parameter name: value"
+    },
+    {
+      "tags": [
+        "javascript",
+        "jquery",
+        "html5",
+        "dynamic"
+      ],
+      "owner": {
+        "reputation": 72,
+        "user_id": 9140438,
+        "user_type": "registered",
+        "accept_rate": 33,
+        "profile_image": "https://www.gravatar.com/avatar/0ae71a2585027b20140af66177e4f049?s=128&d=identicon&r=PG&f=1",
+        "display_name": "Pankaj Sharma",
+        "link": "https://stackoverflow.com/users/9140438/pankaj-sharma"
+      },
+      "is_answered": false,
+      "view_count": 1,
+      "answer_count": 0,
+      "score": 0,
+      "last_activity_date": 1530719618,
+      "creation_date": 1530719618,
+      "question_id": 51177380,
+      "link": "https://stackoverflow.com/questions/51177380/jquery-not-getting-element",
+      "title": "jQuery not getting element"
+    },
+    {
+      "tags": [
+        "javascript",
+        "regex"
+      ],
+      "owner": {
+        "reputation": 39,
+        "user_id": 5488328,
+        "user_type": "registered",
+        "profile_image": "https://i.stack.imgur.com/NUgdk.jpg?s=128&g=1",
+        "display_name": "Andrew Miracle",
+        "link": "https://stackoverflow.com/users/5488328/andrew-miracle"
+      },
+      "is_answered": true,
+      "view_count": 26,
+      "answer_count": 6,
+      "score": 1,
+      "last_activity_date": 1530719615,
+      "creation_date": 1530719093,
+      "question_id": 51177241,
+      "link": "https://stackoverflow.com/questions/51177241/use-regexp-to-convert-a-string-into-an-array-js",
+      "title": "Use RegExp to convert a String into an Array JS"
+    },
+    {
+      "tags": [
+        "c++",
+        "sdl",
+        "vulkan"
+      ],
+      "owner": {
+        "reputation": 1,
+        "user_id": 7483535,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/c873afa51a4eda9eca9bc9400e1b666e?s=128&d=identicon&r=PG&f=1",
+        "display_name": "robot123",
+        "link": "https://stackoverflow.com/users/7483535/robot123"
+      },
+      "is_answered": false,
+      "view_count": 2,
+      "answer_count": 0,
+      "score": 0,
+      "last_activity_date": 1530719611,
+      "creation_date": 1530719611,
+      "question_id": 51177377,
+      "link": "https://stackoverflow.com/questions/51177377/vulkan-crash-program",
+      "title": "Vulkan Crash Program"
+    },
+    {
+      "tags": [
+        "angular",
+        "typescript",
+        "module",
+        "angular5"
+      ],
+      "owner": {
+        "reputation": 11,
+        "user_id": 10023331,
+        "user_type": "registered",
+        "profile_image": "https://lh6.googleusercontent.com/-cZyCdBcb8l8/AAAAAAAAAAI/AAAAAAAAAAA/AB6qoq1CqpIPTE4qhdBTDuiE-xCdlpTOdA/mo/photo.jpg?sz=128",
+        "display_name": "Adolf H",
+        "link": "https://stackoverflow.com/users/10023331/adolf-h"
+      },
+      "is_answered": false,
+      "view_count": 39,
+      "answer_count": 1,
+      "score": 0,
+      "last_activity_date": 1530719611,
+      "creation_date": 1530702323,
+      "last_edit_date": 1530719611,
+      "question_id": 51172176,
+      "link": "https://stackoverflow.com/questions/51172176/angular-5-show-module-in-component",
+      "title": "Angular 5 - Show Module in Component"
+    },
+    {
+      "tags": [
+        "html",
+        "css"
+      ],
+      "owner": {
+        "reputation": 186,
+        "user_id": 5116000,
+        "user_type": "registered",
+        "accept_rate": 55,
+        "profile_image": "https://graph.facebook.com/10155734660865648/picture?type=large",
+        "display_name": "Tom Morison",
+        "link": "https://stackoverflow.com/users/5116000/tom-morison"
+      },
+      "is_answered": false,
+      "view_count": 11,
+      "answer_count": 1,
+      "score": 0,
+      "last_activity_date": 1530719609,
+      "creation_date": 1530719404,
+      "question_id": 51177334,
+      "link": "https://stackoverflow.com/questions/51177334/bootstrap-css-getting-text-to-apopear-on-one-line-in-grid-container",
+      "title": "Bootstrap CSS - getting text to apopear on one line in grid container"
+    },
+    {
+      "tags": [
+        "mysql",
+        "codeigniter",
+        "https",
+        "font-awesome",
+        "mixed-content"
+      ],
+      "owner": {
+        "reputation": 1,
+        "user_id": 10024296,
+        "user_type": "registered",
+        "profile_image": "https://lh6.googleusercontent.com/-idcFIivdEJ0/AAAAAAAAAAI/AAAAAAAAADA/nO8xj_88nSc/photo.jpg?sz=128",
+        "display_name": "rahul yadav",
+        "link": "https://stackoverflow.com/users/10024296/rahul-yadav"
+      },
+      "is_answered": false,
+      "view_count": 37,
+      "answer_count": 1,
+      "score": 0,
+      "last_activity_date": 1530719600,
+      "creation_date": 1530625455,
+      "last_edit_date": 1530639963,
+      "question_id": 51156189,
+      "link": "https://stackoverflow.com/questions/51156189/font-awesome-not-loaded-in-https-gives-error-in-web-browser-console-but-not-give",
+      "title": "font-awesome not loaded in https gives error in web browser console but not give error in http ? how to fix"
+    },
+    {
+      "tags": [
+        "arrays",
+        "bash"
+      ],
+      "owner": {
+        "reputation": 143,
+        "user_id": 9499466,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/18476ecb3774bfcda403a3c69cfc0e5c?s=128&d=identicon&r=PG&f=1",
+        "display_name": "AskMath",
+        "link": "https://stackoverflow.com/users/9499466/askmath"
+      },
+      "is_answered": false,
+      "view_count": 8,
+      "answer_count": 1,
+      "score": 0,
+      "last_activity_date": 1530719600,
+      "creation_date": 1530718268,
+      "last_edit_date": 1530719343,
+      "question_id": 51177044,
+      "link": "https://stackoverflow.com/questions/51177044/how-can-i-see-which-values-exists-in-bash-array",
+      "title": "How can I see which values exists in Bash array?"
+    },
+    {
+      "tags": [
+        "r"
+      ],
+      "owner": {
+        "reputation": 1,
+        "user_id": 10033062,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/ad5acc0d92fcf5b3a486642fee6d4993?s=128&d=identicon&r=PG&f=1",
+        "display_name": "stats03",
+        "link": "https://stackoverflow.com/users/10033062/stats03"
+      },
+      "is_answered": false,
+      "view_count": 5,
+      "answer_count": 0,
+      "score": 0,
+      "last_activity_date": 1530719589,
+      "creation_date": 1530719589,
+      "question_id": 51177373,
+      "link": "https://stackoverflow.com/questions/51177373/lm-for-all-the-pairs-alternative-approaches-of-nested-loops",
+      "title": "lm() for all the pairs ,alternative approaches of nested loops"
+    },
+    {
+      "tags": [
+        "ios",
+        "objective-c",
+        "xcode",
+        "mkmapview",
+        "mapkit"
+      ],
+      "owner": {
+        "reputation": 161,
+        "user_id": 2543819,
+        "user_type": "registered",
+        "accept_rate": 69,
+        "profile_image": "https://graph.facebook.com/100001192981604/picture?type=large",
+        "display_name": "Philip Scheer",
+        "link": "https://stackoverflow.com/users/2543819/philip-scheer"
+      },
+      "is_answered": true,
+      "view_count": 396,
+      "accepted_answer_id": 25483130,
+      "answer_count": 1,
+      "score": 0,
+      "last_activity_date": 1530719588,
+      "creation_date": 1408959238,
+      "last_edit_date": 1530719588,
+      "question_id": 25482922,
+      "link": "https://stackoverflow.com/questions/25482922/xcode-objective-c-pass-data-through-prepareforsegue",
+      "title": "Xcode/Objective-C - pass data through prepareForSegue"
+    },
+    {
+      "tags": [
+        "c#",
+        ".net",
+        "enterprise-library"
+      ],
+      "owner": {
+        "reputation": 42,
+        "user_id": 2531328,
+        "user_type": "registered",
+        "accept_rate": 51,
+        "profile_image": "https://www.gravatar.com/avatar/de2da60c9bb2e0d8d80be56f1979712e?s=128&d=identicon&r=PG",
+        "display_name": "Stephen H. Anderson",
+        "link": "https://stackoverflow.com/users/2531328/stephen-h-anderson"
+      },
+      "is_answered": false,
+      "view_count": 11,
+      "answer_count": 1,
+      "score": -1,
+      "last_activity_date": 1530719584,
+      "creation_date": 1530719237,
+      "question_id": 51177284,
+      "link": "https://stackoverflow.com/questions/51177284/legacy-system-is-there-some-possible-database-connection-leak-with-this-code",
+      "title": "Legacy System: Is there some possible database connection leak with this code?"
+    },
+    {
+      "tags": [
+        "excel-formula"
+      ],
+      "owner": {
+        "reputation": 1,
+        "user_id": 10032054,
+        "user_type": "registered",
+        "profile_image": "https://lh4.googleusercontent.com/-vaTkS6dduLo/AAAAAAAAAAI/AAAAAAAAAAw/FBsDu7P8Fps/photo.jpg?sz=128",
+        "display_name": "LocNV",
+        "link": "https://stackoverflow.com/users/10032054/locnv"
+      },
+      "is_answered": false,
+      "view_count": 19,
+      "answer_count": 1,
+      "score": 0,
+      "last_activity_date": 1530719576,
+      "creation_date": 1530707665,
+      "question_id": 51173851,
+      "link": "https://stackoverflow.com/questions/51173851/error-value-when-calculate-with-result-of-hlookup",
+      "title": "Error #VALUE! when calculate with result of hlookup"
+    },
+    {
+      "tags": [
+        "asp.net-core",
+        "swagger",
+        "reverse-proxy",
+        "swashbuckle"
+      ],
+      "owner": {
+        "reputation": 18,
+        "user_id": 9540395,
+        "user_type": "registered",
+        "profile_image": "https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/photo.jpg?sz=128",
+        "display_name": "FRZ7",
+        "link": "https://stackoverflow.com/users/9540395/frz7"
+      },
+      "is_answered": false,
+      "view_count": 2,
+      "answer_count": 0,
+      "score": 0,
+      "last_activity_date": 1530719568,
+      "creation_date": 1530719568,
+      "question_id": 51177370,
+      "link": "https://stackoverflow.com/questions/51177370/reverse-proxy-iis-to-swagger-ui-dont-working-swaggerui-bundle-undefined",
+      "title": "Reverse Proxy IIS to Swagger UI don&#39;t working SwaggerUI Bundle undefined"
+    },
+    {
+      "tags": [
+        "c++",
+        "linux",
+        "g++"
+      ],
+      "owner": {
+        "reputation": 28,
+        "user_id": 9784373,
+        "user_type": "registered",
+        "profile_image": "https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/photo.jpg?sz=128",
+        "display_name": "HCSF",
+        "link": "https://stackoverflow.com/users/9784373/hcsf"
+      },
+      "is_answered": false,
+      "view_count": 35,
+      "answer_count": 1,
+      "score": 2,
+      "last_activity_date": 1530719567,
+      "creation_date": 1530692160,
+      "last_edit_date": 1530716499,
+      "question_id": 51168908,
+      "link": "https://stackoverflow.com/questions/51168908/fail-to-read-through-shared-memory",
+      "title": "Fail to Read Through Shared Memory"
+    },
+    {
+      "tags": [
+        "regex",
+        "powershell"
+      ],
+      "owner": {
+        "reputation": 6,
+        "user_id": 9884185,
+        "user_type": "registered",
+        "profile_image": "https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/photo.jpg?sz=128",
+        "display_name": "RAM",
+        "link": "https://stackoverflow.com/users/9884185/ram"
+      },
+      "is_answered": true,
+      "view_count": 10,
+      "answer_count": 1,
+      "score": 0,
+      "last_activity_date": 1530719567,
+      "creation_date": 1530717680,
+      "last_edit_date": 1530719369,
+      "question_id": 51176890,
+      "link": "https://stackoverflow.com/questions/51176890/regex-string-pre-and-post-with-no-or-one-or-multiple-space",
+      "title": "regex string pre and post with no or one or multiple space"
+    },
+    {
+      "tags": [
+        "java"
+      ],
+      "owner": {
+        "reputation": 1,
+        "user_id": 9645164,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/9e1119cf010d7444ceefd3b170b9bace?s=128&d=identicon&r=PG&f=1",
+        "display_name": "arkusie",
+        "link": "https://stackoverflow.com/users/9645164/arkusie"
+      },
+      "is_answered": false,
+      "view_count": 34,
+      "answer_count": 1,
+      "score": -2,
+      "last_activity_date": 1530719566,
+      "creation_date": 1530715949,
+      "last_edit_date": 1530719566,
+      "question_id": 51176396,
+      "link": "https://stackoverflow.com/questions/51176396/learning-java-by-book-sierra-k-head-first-java-example-isnt-running",
+      "title": "Learning Java by book sierra k &quot;head first java&quot;. Example isnt running"
+    },
+    {
+      "tags": [
+        "python",
+        "opencv",
+        "edge",
+        "canny-operator"
+      ],
+      "owner": {
+        "reputation": 26,
+        "user_id": 5345662,
+        "user_type": "registered",
+        "accept_rate": 75,
+        "profile_image": "https://www.gravatar.com/avatar/3d8056c204a27e2d717b40761faf0ec1?s=128&d=identicon&r=PG&f=1",
+        "display_name": "tribol",
+        "link": "https://stackoverflow.com/users/5345662/tribol"
+      },
+      "is_answered": true,
+      "view_count": 34,
+      "answer_count": 3,
+      "score": 0,
+      "last_activity_date": 1530719566,
+      "creation_date": 1530692993,
+      "question_id": 51169162,
+      "link": "https://stackoverflow.com/questions/51169162/finding-edge-in-tilted-image-with-canny",
+      "title": "finding edge in tilted image with Canny"
+    },
+    {
+      "tags": [
+        "python",
+        "python-3.x",
+        "python-2.7"
+      ],
+      "owner": {
+        "reputation": 1,
+        "user_id": 10027734,
+        "user_type": "registered",
+        "profile_image": "https://lh5.googleusercontent.com/-mwAQKCz2_w4/AAAAAAAAAAI/AAAAAAAAAAA/AB6qoq26DzwXkeKY0VjR5y3OZtXfz15yrg/mo/photo.jpg?sz=128",
+        "display_name": "krishna oadba",
+        "link": "https://stackoverflow.com/users/10027734/krishna-oadba"
+      },
+      "is_answered": false,
+      "view_count": 15,
+      "answer_count": 0,
+      "score": 0,
+      "last_activity_date": 1530719562,
+      "creation_date": 1530719443,
+      "last_edit_date": 1530719562,
+      "question_id": 51177345,
+      "link": "https://stackoverflow.com/questions/51177345/writing-print-output-to-csv-file",
+      "title": "writing print output to csv file"
+    },
+    {
+      "tags": [
+        "linux",
+        "terminal"
+      ],
+      "owner": {
+        "reputation": 827,
+        "user_id": 641562,
+        "user_type": "registered",
+        "accept_rate": 47,
+        "profile_image": "https://www.gravatar.com/avatar/1aa522f2f6c31f19d872055ade493598?s=128&d=identicon&r=PG",
+        "display_name": "jrock2004",
+        "link": "https://stackoverflow.com/users/641562/jrock2004"
+      },
+      "is_answered": false,
+      "view_count": 2,
+      "answer_count": 0,
+      "score": 0,
+      "last_activity_date": 1530719552,
+      "creation_date": 1530719552,
+      "question_id": 51177367,
+      "link": "https://stackoverflow.com/questions/51177367/linux-terminal-support-regular-and-ascii-font",
+      "title": "Linux terminal support regular and ascii font"
+    },
+    {
+      "tags": [
+        "git"
+      ],
+      "owner": {
+        "reputation": 370,
+        "user_id": 5577213,
+        "user_type": "registered",
+        "accept_rate": 19,
+        "profile_image": "https://www.gravatar.com/avatar/df7750c0014fd6582a27906823fe5efb?s=128&d=identicon&r=PG&f=1",
+        "display_name": "kylas",
+        "link": "https://stackoverflow.com/users/5577213/kylas"
+      },
+      "is_answered": true,
+      "view_count": 30,
+      "answer_count": 2,
+      "score": 2,
+      "last_activity_date": 1530719544,
+      "creation_date": 1530623893,
+      "question_id": 51155656,
+      "link": "https://stackoverflow.com/questions/51155656/what-is-the-difference-between-headmaster-and-head",
+      "title": "What is the difference between HEAD:master and HEAD?"
+    }
+  ],
+  "has_more": true,
+  "quota_max": 300,
+  "quota_remaining": 293
+}
