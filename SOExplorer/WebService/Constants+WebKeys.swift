@@ -30,6 +30,13 @@ extension Constants {
         struct Question {
             
             static let items = "items"
+            static let questions = "questions"
+        }
+        
+        struct Answer {
+            
+            static let items = "items"
+            static let answers = "answers"
         }
     }
 }

@@ -12,16 +12,26 @@ import XCTest
 
 class QuestionTests: XCTestCase {
 
-    let json = DataMocker.loadJson(forFilename: "questions_response")![WebKeys.Question.items] as! [JSON]
+    
     var testQuestion: Question!
     var testQuestions: [Question]!
     
     override func setUp() {
         super.setUp()
         
-        testQuestions = try! Question.decode(from: json)
+        testQuestions = QuestionTests.mockQuestions()
         testQuestion = testQuestions.first!
     }
+    
+    // MARK: - Utility
+    
+    static func mockQuestions() -> [Question] {
+        
+        let json = DataMocker.loadJson(forFilename: "questions_response")![WebKeys.Question.items] as! [JSON]
+        return try! Question.decode(from: json)
+    }
+    
+    // MARK: - Tests
     
     func testQuestionsInitialization() {
         

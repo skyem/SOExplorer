@@ -12,7 +12,7 @@ struct Constants {
     
     struct Questions {
         
-        static let showWhoAnsweredIt = "Show Who Answered It"
-        static let hideWhoAnsweredIt = "Hide Who Answered It"
+        static let showWhoAnsweredIt = "Show Who Has The Accepted Answer"
+        static let hideWhoAnsweredIt = "Hide Who Has The Accepted Answer"
     }
 }
