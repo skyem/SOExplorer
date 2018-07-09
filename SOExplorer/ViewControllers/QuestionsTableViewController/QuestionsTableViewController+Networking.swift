@@ -8,10 +8,15 @@
 
 import Foundation
 import CocoaLumberjack
+import NVActivityIndicatorView
 
 extension QuestionsTableViewController {
     
+    // MARK: - Networking
+    
     func loadQuestions(forPage page: Int = 1) {
+        
+        showLoadingIndicator()
         
         WebService.getQuestions(forPage: page) { response in
             
@@ -19,11 +24,13 @@ extension QuestionsTableViewController {
                 
             case .failure(let error):
                 DDLogError("Unable to retrieve questions with error: \(error.localizedDescription)")
+                self.hideLoadingIndicator()
                 self.showAlert(for: .errorRetrievingQuestions)
                 
             case .success(let json):
                 DDLogDebug("Retrieved questions")
-                guard let questionJSONArray = json[WebKeys.Question.items] as? [JSON] else { DDLogError("Questions array not found"); return }
+                guard let questionJSONArray = json[WebKeys.Question.items] as? [JSON]
+                    else { DDLogError("Questions array not found"); self.hideLoadingIndicator(); return }
                 
                 do {
                     let questions = try Question.decode(from: questionJSONArray)
@@ -42,6 +49,8 @@ extension QuestionsTableViewController {
                 catch let error {
                     
                     DDLogError("Unable to decode Questions: \(error.localizedDescription)")
+                    self.showAlert(for: .errorRetrievingQuestions)
+                    self.hideLoadingIndicator()
                 }
             }
         }
@@ -59,6 +68,8 @@ extension QuestionsTableViewController {
         }
         
         WebService.getAnswers(withIdentifiers: Array(acceptedAnswerQuestionDictionary.keys)) { response in
+            
+            defer { self.hideLoadingIndicator() }
             
             switch response.result {
                 
@@ -87,5 +98,18 @@ extension QuestionsTableViewController {
                 self.tableView.reloadData()
             }
         }
+    }
+    
+    // MARK: - Utility
+    
+    fileprivate func showLoadingIndicator() {
+        
+        let activityData = ActivityData.init(message: "Loading Questions", type: .lineScalePulseOut)
+        NVActivityIndicatorPresenter.sharedInstance.startAnimating(activityData)
+    }
+    
+    fileprivate func hideLoadingIndicator() {
+        
+        NVActivityIndicatorPresenter.sharedInstance.stopAnimating()
     }
 }

@@ -11,6 +11,9 @@ PODS:
   - KIF (3.7.3):
     - KIF/Core (= 3.7.3)
   - KIF/Core (3.7.3)
+  - NVActivityIndicatorView (4.2.1):
+    - NVActivityIndicatorView/Presenter (= 4.2.1)
+  - NVActivityIndicatorView/Presenter (4.2.1)
   - Reusable (4.0.2):
     - Reusable/Storyboard (= 4.0.2)
     - Reusable/View (= 4.0.2)
@@ -26,6 +29,7 @@ DEPENDENCIES:
   - Crashlytics
   - Fabric
   - KIF
+  - NVActivityIndicatorView
   - Reusable
   - SwiftGen
   - ThunderCats
@@ -38,6 +42,7 @@ SPEC REPOS:
     - Crashlytics
     - Fabric
     - KIF
+    - NVActivityIndicatorView
     - Reusable
     - SwiftGen
     - ThunderCats
@@ -49,10 +54,11 @@ SPEC CHECKSUMS:
   Crashlytics: 2aea305161a2122492698c75af27f2b98aa49a25
   Fabric: fba4684a95df789565b0b27fc5b6e68f1755af32
   KIF: 4c23b5d24dba24d3cb6dbb9c7d325b31e526ba4a
+  NVActivityIndicatorView: 8068ba3ad39cb44cbaab25d89ff2546b3f092681
   Reusable: 584a5629747c52e0f6a77841b400dc2643f6fa0f
   SwiftGen: 4379bd3640b0a212a0f6ea3c494adba385513d10
   ThunderCats: 230e83861086834b920fd1402c2c8a0a5d958247
 
-PODFILE CHECKSUM: 7976687c1276ee91fa22713bf7c55660a55eabb2
+PODFILE CHECKSUM: c025b2f45f242fc46c3b2074df3b0e47a7bc5ef5
 
 COCOAPODS: 1.5.3

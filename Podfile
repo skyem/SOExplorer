@@ -15,6 +15,7 @@ def core_pods
     pod 'ThunderCats'
     pod 'SwiftGen'
     pod 'Reusable'
+    pod 'NVActivityIndicatorView'
 end
 
 target 'SOExplorer' do
@@ -22,10 +23,6 @@ target 'SOExplorer' do
   
   target 'SOExplorerTests' do
     inherit! :search_paths
-  end
-  
-  target 'SOExplorerUITests' do
-      inherit! :search_paths
   end
   
   target 'SOExplorerKIFTests' do

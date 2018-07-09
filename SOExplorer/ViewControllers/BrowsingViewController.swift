@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 class BrowsingViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {

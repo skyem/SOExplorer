@@ -15,8 +15,8 @@ class QuestionsTableViewController: UITableViewController {
     
     // MARK: - Constants
     
-    let pageLimit = 5
-    let preferredQuestionAmount = 80
+    let pageLimit = 10
+    let preferredQuestionAmount = 30
     
     var acceptedAnswersToShow = Set<Int>()
     
