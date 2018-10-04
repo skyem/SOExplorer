@@ -19,11 +19,11 @@ script:
   - xcodebuild -showsdks
 
 # Build Framework in Debug and Run Tests if specified
-- if [ $RUN_TESTS == "YES" ]; then
-    xcodebuild -workspace "$WORKSPACE" -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug test | xcpretty -c;
-  else
-    xcodebuild -workspace "$WORKSPACE" -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug build | xcpretty -c;
-  fi
+  - if [ $RUN_TESTS == "YES" ]; then
+      xcodebuild -workspace "$WORKSPACE" -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug test | xcpretty -c;
+    else
+      xcodebuild -workspace "$WORKSPACE" -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug build | xcpretty -c;
+    fi
 
 after_success:
 - bundle binstub slather
