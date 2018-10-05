@@ -18,7 +18,7 @@ script:
   - xcodebuild -version
   - xcodebuild -showsdks
 
-# Build Framework in Debug and Run Tests if specified - test
+# Build Framework in Debug and Run Tests if specified - testing
   - if [ $RUN_TESTS == "YES" ]; then
       xcodebuild -workspace "$WORKSPACE" -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug test | xcpretty -c;
     else
