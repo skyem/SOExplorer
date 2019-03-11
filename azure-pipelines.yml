@@ -11,7 +11,7 @@ pool:
 
 steps:
 - script: |
-    CALL gem install bundler
+    CALL gem install bundler:1.17.3
     bundle install --retry=3 --jobs=4
   displayName: 'bundle install'
 - task: InstallAppleCertificate@2
