@@ -1,0 +1,58 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+xcversion(version: "10.1")
+
+platform :ios do
+    
+    lane :createIntegrationBuild do
+        tests
+        build
+    end
+    
+    lane :createBuild do
+        build
+    end
+    
+    private_lane :tests do
+        reset_simulators
+        scan(scheme: ENV["SCHEME"])
+        slather(
+            output_directory: "fastlane/test_output/slather",
+            scheme: ENV["SCHEME"],
+            proj: ENV["PROJECT"],
+            jenkins: true,
+            html: true
+        )
+        slather(
+            output_directory: "fastlane/test_output/slather",
+            scheme: ENV["SCHEME"],
+            proj: ENV["PROJECT"],
+            jenkins: true,
+            cobertura_xml: true
+        )
+    end
+    
+    private_lane :build do
+        gym(
+            scheme: ENV["SCHEME"],
+            clean: true,
+            include_bitcode: false,
+            include_symbols: true,
+            export_options: ENV["EXPORT_OPTIONS"]
+        )
+    end
+end
