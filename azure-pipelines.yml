@@ -34,3 +34,8 @@ steps:
     forceRepoUpdate: true
 - script: |
     bundle exec fastlane createIntegrationBuild --env so
+- task: PublishCodeCoverageResults@1
+  inputs:
+    codeCoverageTool: 'cobertura'
+    summaryFileLocation: 'fastlane/test_output/slather/cobertura.xml'
+    failIfCoverageEmpty: true
