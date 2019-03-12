@@ -33,4 +33,4 @@ steps:
   inputs:
     forceRepoUpdate: true
 - script: |
-    bundle exec fastlane createBuild --env so
+    bundle exec fastlane createIntegrationBuild --env so

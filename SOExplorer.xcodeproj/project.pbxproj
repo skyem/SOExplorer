@@ -23,8 +23,6 @@
 		3A4572F120EDA19A00B8A900 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4572F020EDA19A00B8A900 /* Owner.swift */; };
 		3A4572F320EDA5F300B8A900 /* SOCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4572F220EDA5F300B8A900 /* SOCodable.swift */; };
 		3A6C1DCD20F2C94D0083FAD6 /* AnswerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6C1DCC20F2C94D0083FAD6 /* AnswerTests.swift */; };
-		3A6C1DCF20F2CA4E0083FAD6 /* answers_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A6C1DCE20F2CA4E0083FAD6 /* answers_response.json */; };
-		3A6C1DD120F2CA4E0083FAD6 /* answers_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A6C1DCE20F2CA4E0083FAD6 /* answers_response.json */; };
 		3A6C1DD320F2CF800083FAD6 /* QuestionsTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6C1DD220F2CF800083FAD6 /* QuestionsTableViewControllerTests.swift */; };
 		3A8609C120EFAC1A00E72349 /* BrowsingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8609C020EFAC1A00E72349 /* BrowsingViewController.swift */; };
 		3A8609C320EFAE9F00E72349 /* QuestionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8609C220EFAE9F00E72349 /* QuestionsTableViewController.swift */; };
@@ -105,7 +103,6 @@
 		3A4572F020EDA19A00B8A900 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		3A4572F220EDA5F300B8A900 /* SOCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOCodable.swift; sourceTree = "<group>"; };
 		3A6C1DCC20F2C94D0083FAD6 /* AnswerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerTests.swift; sourceTree = "<group>"; };
-		3A6C1DCE20F2CA4E0083FAD6 /* answers_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = answers_response.json; path = ../../../../Users/skyemccaskey/Documents/answers_response.json; sourceTree = "<group>"; };
 		3A6C1DD220F2CF800083FAD6 /* QuestionsTableViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsTableViewControllerTests.swift; sourceTree = "<group>"; };
 		3A8609C020EFAC1A00E72349 /* BrowsingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowsingViewController.swift; sourceTree = "<group>"; };
 		3A8609C220EFAE9F00E72349 /* QuestionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsTableViewController.swift; sourceTree = "<group>"; };
@@ -343,7 +340,6 @@
 			isa = PBXGroup;
 			children = (
 				3AE7895720EEFB9000940850 /* DataMocker.swift */,
-				3A6C1DCE20F2CA4E0083FAD6 /* answers_response.json */,
 				3AE7895F20EF084000940850 /* questions_response.json */,
 			);
 			path = DataMocking;
@@ -498,7 +494,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A6C1DCF20F2CA4E0083FAD6 /* answers_response.json in Resources */,
 				3AE7896020EF0A3D00940850 /* questions_response.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -507,7 +502,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A6C1DD120F2CA4E0083FAD6 /* answers_response.json in Resources */,
 				3AE7896220EF0A3E00940850 /* questions_response.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
