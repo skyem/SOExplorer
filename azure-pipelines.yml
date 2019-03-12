@@ -39,3 +39,4 @@ steps:
     codeCoverageTool: 'cobertura'
     summaryFileLocation: 'fastlane/test_output/slather/cobertura.xml'
     failIfCoverageEmpty: true
+    publishRunAttachments: true
