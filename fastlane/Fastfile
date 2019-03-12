@@ -34,6 +34,7 @@ platform :ios do
             output_directory: "fastlane/test_output/slather",
             scheme: ENV["SCHEME"],
             proj: ENV["PROJECT"],
+            workspace: ENV["WORKSPACE"],
             jenkins: true,
             html: true
         )
@@ -41,6 +42,7 @@ platform :ios do
             output_directory: "fastlane/test_output/slather",
             scheme: ENV["SCHEME"],
             proj: ENV["PROJECT"],
+            workspace: ENV["WORKSPACE"],
             jenkins: true,
             cobertura_xml: true
         )
