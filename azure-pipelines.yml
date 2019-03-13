@@ -3,6 +3,12 @@
 # Add steps that install certificates, test, sign, and distribute an app, save build artifacts, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/xcode
 
+variables:
+  scheme: 'SOExplorer'
+  workspace: 'SOExplorer.xcworkspace'
+  sdk: 'iphoneos'
+  configuration: 'Release'
+
 trigger:
 - master
 
@@ -32,11 +38,14 @@ steps:
 - task: CocoaPods@0
   inputs:
     forceRepoUpdate: true
-- script: |
-    bundle exec fastlane createIntegrationBuild --env so
-- task: PublishCodeCoverageResults@1
+
+- task: Xcode@5
   inputs:
-    codeCoverageTool: 'cobertura'
-    summaryFileLocation: 'fastlane/test_output/slather/cobertura.xml'
-    failIfCoverageEmpty: true
-    publishRunAttachments: true
+    sdk: '$(sdk)'
+    xcWorkspacePath: '$(workspace)'
+    scheme: '$(scheme)'
+    configuration: '$(configuration)'
+    xcodeVersion: '10'
+    exportPath: '$(agent.buildDirectory)/output/$(sdk)/$(configuration)'
+    useXcpretty: true
+    publishJUnitResults: true
