@@ -47,5 +47,5 @@ steps:
     configuration: '$(configuration)'
     xcodeVersion: '10'
     exportPath: '$(agent.buildDirectory)/output/$(sdk)/$(configuration)'
-    useXcpretty: true
+    useXcpretty: false
     publishJUnitResults: true
