@@ -19,6 +19,7 @@ steps:
 - script: |
     gem install bundler
     bundle install --retry=3 --jobs=4
+    bundle exec pod install --repo-update
   displayName: bundle install
 - task: InstallAppleCertificate@2
   inputs:
@@ -35,10 +36,6 @@ steps:
     provisioningProfileLocation: 'secureFiles'
     provProfileSecureFile: 'SOExplorerDevelopment.mobileprovision'
     removeProfile: true
-- task: CocoaPods@0
-  inputs:
-    forceRepoUpdate: true
-
 - task: Xcode@5
   inputs:
     sdk: '$(sdk)'
