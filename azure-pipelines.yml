@@ -42,3 +42,9 @@ steps:
     additionalCodeCoverageFiles: '$(System.DefaultWorkingDirectory)/fastlane/test_output/*.junit'
     failIfCoverageEmpty: true
     publishRunAttachments: true
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'JUnit'
+    testResultsFiles: '$(System.DefaultWorkingDirectory)/fastlane/test_output/*.junit'
+    searchFolder: '$(System.DefaultWorkingDirectory)/fastlane/test_output'
+    failTaskOnFailedTests: true
