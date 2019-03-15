@@ -37,6 +37,8 @@ steps:
 - task: PublishCodeCoverageResults@1
   inputs:
     codeCoverageTool: 'cobertura'
-    summaryFileLocation: 'fastlane/test_output/slather/cobertura.xml'
+    summaryFileLocation: '$(System.DefaultWorkingDirectory)/fastlane/test_output/slather/cobertura.xml'
+    reportDirectory: '$(System.DefaultWorkingDirectory)/fastlane/test_output/slather'
+    additionalCodeCoverageFiles: '$(System.DefaultWorkingDirectory)/fastlane/test_output/*.junit'
     failIfCoverageEmpty: true
     publishRunAttachments: true
