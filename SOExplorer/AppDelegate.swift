@@ -29,5 +29,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         DDLog.add(ttyLogger, with: .verbose)
     }
 }
-
-// Test
