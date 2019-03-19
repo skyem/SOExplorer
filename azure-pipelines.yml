@@ -46,5 +46,5 @@ steps:
     exportPath: '$(agent.buildDirectory)/output/$(sdk)/$(configuration)'
     signingOption: 'manual'
     provisioningProfileName: 'SOBrowserDistribution'
-    useXcpretty: false
+    useXcpretty: true
     publishJUnitResults: true
