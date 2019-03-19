@@ -872,8 +872,8 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 666KE6T99G;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 889TX26285;
 				INFOPLIST_FILE = SOExplorerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -882,6 +882,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.skyemccaskey.SOExplorerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SOExplorer.app/SOExplorer";
@@ -894,8 +895,8 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 666KE6T99G;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 889TX26285;
 				INFOPLIST_FILE = SOExplorerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -904,6 +905,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.skyemccaskey.SOExplorerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SOExplorer.app/SOExplorer";
@@ -915,8 +917,8 @@
 			baseConfigurationReference = 14C876E49E8DCAEDF07A12D5 /* Pods-SOExplorerKIFTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 666KE6T99G;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 889TX26285;
 				INFOPLIST_FILE = SOExplorerKIFTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -925,6 +927,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.skyemccaskey.SOExplorerKIFTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SOExplorer.app/SOExplorer";
@@ -936,8 +939,8 @@
 			baseConfigurationReference = 276AFD588B6ED852A33C8201 /* Pods-SOExplorerKIFTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 666KE6T99G;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 889TX26285;
 				INFOPLIST_FILE = SOExplorerKIFTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -946,6 +949,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.skyemccaskey.SOExplorerKIFTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SOExplorer.app/SOExplorer";
