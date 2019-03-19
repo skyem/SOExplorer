@@ -44,6 +44,7 @@ steps:
     configuration: '$(configuration)'
     xcodeVersion: '10'
     exportPath: '$(agent.buildDirectory)/output/$(sdk)/$(configuration)'
-    signingOption: 'manual' 
+    signingOption: 'manual'
+    provisioningProfileName: 'SOBrowserDistribution'
     useXcpretty: false
     publishJUnitResults: true
