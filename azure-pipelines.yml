@@ -21,17 +21,6 @@ steps:
     bundle install --retry=3 --jobs=4
     bundle exec pod install --repo-update
   displayName: bundle install
-- task: Xcode@5
-  inputs:
-    actions: 'clean test'
-    sdk: '$(sdk)'
-    xcWorkspacePath: '$(workspace)'
-    scheme: '$(scheme)'
-    configuration: '$(configuration)'
-    xcodeVersion: '10'
-    signingOption: 'auto'
-    useXcpretty: true
-    publishJUnitResults: true
 - task: InstallAppleCertificate@2
   inputs:
     certSecureFile: 'hcadist.p12'
@@ -49,6 +38,17 @@ steps:
     removeProfile: true
 - task: Xcode@5
   inputs:
+    actions: 'clean test'
+    sdk: '$(sdk)'
+    xcWorkspacePath: '$(workspace)'
+    scheme: '$(scheme)'
+    configuration: '$(configuration)'
+    xcodeVersion: '10'
+    signingOption: 'auto'
+    useXcpretty: true
+    publishJUnitResults: true
+- task: Xcode@5
+  inputs:
     actions: 'build archive'
     sdk: '$(sdk)'
     xcWorkspacePath: '$(workspace)'
@@ -56,6 +56,5 @@ steps:
     configuration: '$(configuration)'
     xcodeVersion: '10'
     exportPath: '$(agent.buildDirectory)/output/$(sdk)/$(configuration)'
-    signingOption: 'manual'
-    provisioningProfileName: 'SOBrowserDistribution'
+    signingOption: 'automatic'
     useXcpretty: true
