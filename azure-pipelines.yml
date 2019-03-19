@@ -44,7 +44,6 @@ steps:
     scheme: '$(scheme)'
     configuration: '$(configuration)'
     xcodeVersion: '10'
-    provisioningProfileName: 'SOBrowserDistribution'
     signingOption: 'manual'
     useXcpretty: true
     publishJUnitResults: true
@@ -57,5 +56,6 @@ steps:
     configuration: '$(configuration)'
     xcodeVersion: '10'
     exportPath: '$(agent.buildDirectory)/output/$(sdk)/$(configuration)'
-    signingOption: 'automatic'
+    provisioningProfileName: 'SOBrowserDistribution'
+    signingOption: 'manual'
     useXcpretty: true
