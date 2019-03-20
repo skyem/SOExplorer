@@ -19,7 +19,7 @@ steps:
 - script: |
     gem install bundler
     bundle install --retry=3 --jobs=4
-    bundle exec pod install --repo-update
+    bundle exec pod install
   displayName: bundle install
 - task: InstallAppleCertificate@2
   inputs:
