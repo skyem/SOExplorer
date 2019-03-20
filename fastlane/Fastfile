@@ -41,7 +41,9 @@ platform :ios do
         xcov(
              workspace: ENV["WORKSPACE"],
              scheme: ENV["SCHEME"],
-             output_directory: "fastlane/test_output/xcov_output"
+             output_directory: "fastlane/test_output/xcov_output",
+             html_report: false,
+             markdown_report: true
         )
         slather(
             output_directory: "fastlane/test_output/slather",
