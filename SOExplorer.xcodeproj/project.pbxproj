@@ -76,6 +76,7 @@
 		275DD1282237029C001A87B3 /* so_export.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = so_export.plist; path = fastlane/so_export.plist; sourceTree = "<group>"; };
 		276AFD588B6ED852A33C8201 /* Pods-SOExplorerKIFTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOExplorerKIFTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SOExplorerKIFTests/Pods-SOExplorerKIFTests.release.xcconfig"; sourceTree = "<group>"; };
 		27DFB0B22242B17A00744FCE /* azure-pipelines.yml */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = "azure-pipelines.yml"; sourceTree = "<group>"; };
+		27DFB0B42242BBAE00744FCE /* Podfile.lock */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = Podfile.lock; sourceTree = "<group>"; };
 		34A8A5F0303E085BA62A2D97 /* Pods-SOExplorer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOExplorer.release.xcconfig"; path = "Pods/Target Support Files/Pods-SOExplorer/Pods-SOExplorer.release.xcconfig"; sourceTree = "<group>"; };
 		381EB49746FBAA27E203E2D6 /* Pods-SOExplorerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOExplorerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SOExplorerTests/Pods-SOExplorerTests.release.xcconfig"; sourceTree = "<group>"; };
 		3A45729920ED065F00B8A900 /* SOExplorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SOExplorer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -225,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				3A4572CA20ED06FC00B8A900 /* Podfile */,
+				27DFB0B42242BBAE00744FCE /* Podfile.lock */,
 				3A4572DC20ED1C0D00B8A900 /* Gemfile */,
 				27DFB0B22242B17A00744FCE /* azure-pipelines.yml */,
 				3A4572DB20ED1C0D00B8A900 /* .ruby-version */,
@@ -567,7 +569,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-SOExplorerKIFTests/Pods-SOExplorerKIFTests-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-SOExplorerKIFTests/Pods-SOExplorerKIFTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/KIF/KIF.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -576,7 +578,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SOExplorerKIFTests/Pods-SOExplorerKIFTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SOExplorerKIFTests/Pods-SOExplorerKIFTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7458B1594C3D25B601CF6361 /* [CP] Embed Pods Frameworks */ = {
@@ -585,7 +587,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-SOExplorer/Pods-SOExplorer-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-SOExplorer/Pods-SOExplorer-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
@@ -604,7 +606,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SOExplorer/Pods-SOExplorer-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SOExplorer/Pods-SOExplorer-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7FED62A9F698CE11E3C13F11 /* [CP] Check Pods Manifest.lock */ = {
