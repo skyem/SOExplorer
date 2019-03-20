@@ -38,7 +38,7 @@ steps:
   inputs:
     codeCoverageTool: 'cobertura'
     summaryFileLocation: '$(System.DefaultWorkingDirectory)/fastlane/test_output/slather/cobertura.xml'
-    reportDirectory: '$(System.DefaultWorkingDirectory)/fastlane/test_output/slather'
+    reportDirectory: '$(System.DefaultWorkingDirectory)/fastlane/test_output/xcov_output'
     failIfCoverageEmpty: true
     publishRunAttachments: true
 - task: PublishTestResults@2
