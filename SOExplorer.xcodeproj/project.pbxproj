@@ -876,7 +876,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 889TX26285;
 				INFOPLIST_FILE = SOExplorerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -900,7 +900,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 889TX26285;
 				INFOPLIST_FILE = SOExplorerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -923,7 +923,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 889TX26285;
 				INFOPLIST_FILE = SOExplorerKIFTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -946,7 +946,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 889TX26285;
 				INFOPLIST_FILE = SOExplorerKIFTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
