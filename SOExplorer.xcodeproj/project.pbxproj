@@ -75,6 +75,7 @@
 		275DD1262236F796001A87B3 /* .env.so */ = {isa = PBXFileReference; lastKnownFileType = text; name = .env.so; path = fastlane/.env.so; sourceTree = "<group>"; };
 		275DD1282237029C001A87B3 /* so_export.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = so_export.plist; path = fastlane/so_export.plist; sourceTree = "<group>"; };
 		276AFD588B6ED852A33C8201 /* Pods-SOExplorerKIFTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOExplorerKIFTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SOExplorerKIFTests/Pods-SOExplorerKIFTests.release.xcconfig"; sourceTree = "<group>"; };
+		27DFB0B22242B17A00744FCE /* azure-pipelines.yml */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = "azure-pipelines.yml"; sourceTree = "<group>"; };
 		34A8A5F0303E085BA62A2D97 /* Pods-SOExplorer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOExplorer.release.xcconfig"; path = "Pods/Target Support Files/Pods-SOExplorer/Pods-SOExplorer.release.xcconfig"; sourceTree = "<group>"; };
 		381EB49746FBAA27E203E2D6 /* Pods-SOExplorerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOExplorerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SOExplorerTests/Pods-SOExplorerTests.release.xcconfig"; sourceTree = "<group>"; };
 		3A45729920ED065F00B8A900 /* SOExplorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SOExplorer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -225,6 +226,7 @@
 			children = (
 				3A4572CA20ED06FC00B8A900 /* Podfile */,
 				3A4572DC20ED1C0D00B8A900 /* Gemfile */,
+				27DFB0B22242B17A00744FCE /* azure-pipelines.yml */,
 				3A4572DB20ED1C0D00B8A900 /* .ruby-version */,
 				275DD1222236F6CB001A87B3 /* Appfile */,
 				275DD1202236F6CB001A87B3 /* Fastfile */,

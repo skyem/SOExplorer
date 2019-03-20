@@ -23,6 +23,16 @@ steps:
   displayName: bundle install
 - task: InstallAppleCertificate@2
   inputs:
+    certSecureFile: 'skye.p12'
+    certPwd: 'skye'
+    deleteCert: true
+- task: InstallAppleCertificate@2
+  inputs:
+    certSecureFile: 'skyehca.p12'
+    certPwd: 'skye'
+    deleteCert: true
+- task: InstallAppleCertificate@2
+  inputs:
     certSecureFile: 'hcadist.p12'
     certPwd: 'skye'
     deleteCert: true
