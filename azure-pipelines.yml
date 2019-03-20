@@ -55,6 +55,7 @@ steps:
     configuration: '$(configuration)'
     xcodeVersion: '10'
     signingOption: 'manual'
+    provisioningProfileName: 'SOBrowserDistribution'
     useXcpretty: true
     publishJUnitResults: true
 - task: Xcode@5
