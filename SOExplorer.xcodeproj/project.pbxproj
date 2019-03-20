@@ -853,7 +853,7 @@
 			baseConfigurationReference = 34A8A5F0303E085BA62A2D97 /* Pods-SOExplorer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 889TX26285;
 				INFOPLIST_FILE = SOExplorer/Info.plist;
@@ -863,7 +863,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.skye.SOExplorer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = SOBrowserDistribution;
+				PROVISIONING_PROFILE_SPECIFIER = SOExplorerDevelopment;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
