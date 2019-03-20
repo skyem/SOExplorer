@@ -48,7 +48,7 @@ steps:
     removeProfile: true
 - task: Xcode@5
   inputs:
-    actions: 'clean test'
+    actions: 'clean build test'
     sdk: '$(sdk)'
     xcWorkspacePath: '$(workspace)'
     scheme: '$(scheme)'
