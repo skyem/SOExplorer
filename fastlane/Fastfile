@@ -38,13 +38,6 @@ platform :ios do
             jenkins: true,
             html: true
         )
-        xcov(
-             workspace: ENV["WORKSPACE"],
-             scheme: ENV["SCHEME"],
-             output_directory: "fastlane/test_output/xcov_output",
-             html_report: false,
-             markdown_report: true
-        )
         slather(
             output_directory: "fastlane/test_output/slather",
             scheme: ENV["SCHEME"],

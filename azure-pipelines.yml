@@ -34,11 +34,18 @@ steps:
     forceRepoUpdate: true
 - script: |
     bundle exec fastlane createIntegrationBuild --env so
+    pip install beautifulsoup4
+    python emded_css_for_coverage.py
+  displayName: Fastlane
+- script: |
+    pip install beautifulsoup4
+    python emdedCSSForCoverage.py
+  displayName: Embed CSS for Code Coverage Report
 - task: PublishCodeCoverageResults@1
   inputs:
     codeCoverageTool: 'cobertura'
     summaryFileLocation: '$(System.DefaultWorkingDirectory)/fastlane/test_output/slather/cobertura.xml'
-    reportDirectory: '$(System.DefaultWorkingDirectory)/fastlane/test_output/xcov_output'
+    reportDirectory: '$(System.DefaultWorkingDirectory)/fastlane/test_output/slather'
     failIfCoverageEmpty: true
     publishRunAttachments: true
 - task: PublishTestResults@2
