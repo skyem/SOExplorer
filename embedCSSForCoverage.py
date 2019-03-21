@@ -3,6 +3,7 @@ Fixes VSTS coverage reports by inlining CSS files.
 see https://github.com/Microsoft/vsts-tasks/issues/3027
 Based on https://stackoverflow.com/a/23190429/7417402
 """
+from __future__ import print_function
 import os
 
 import bs4
@@ -19,7 +20,7 @@ def embed_css_in_html_file(html_file, css_dir):
     for s in stylesheets:
         t = soup.new_tag('style')
         css_file = s["href"]
-        print(f"found link to {css_file}")
+        print("found link to {}".format(css_file))
         with open(os.path.join(css_dir, css_file), 'r') as f:
             c = bs4.element.NavigableString(f.read())
         t.insert(0, c)
@@ -32,5 +33,5 @@ def embed_css_in_html_file(html_file, css_dir):
 
 for file in os.listdir(COVERAGE_REPORT_DIR):
     if file.endswith(".html"):
-        print(f"Embedding CSS in {file}")
+        print("Embedding CSS in {}".format(file))
         embed_css_in_html_file(os.path.join(COVERAGE_REPORT_DIR, file), COVERAGE_REPORT_DIR)
