@@ -34,8 +34,6 @@ steps:
     forceRepoUpdate: true
 - script: |
     bundle exec fastlane createIntegrationBuild --env so
-    pip install beautifulsoup4
-    python emded_css_for_coverage.py
   displayName: Fastlane
 - script: |
     pip install beautifulsoup4
