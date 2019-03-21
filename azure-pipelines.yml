@@ -37,7 +37,7 @@ steps:
   displayName: Fastlane
 - script: |
     pip install beautifulsoup4
-    python emdedCSSForCoverage.py
+    python embedCSSForCoverage.py
   displayName: Embed CSS for Code Coverage Report
 - task: PublishCodeCoverageResults@1
   inputs:
