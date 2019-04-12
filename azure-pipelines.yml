@@ -1,0 +1,54 @@
+# Xcode
+# Build, test, and archive an Xcode workspace on macOS.
+# Add steps that install certificates, test, sign, and distribute an app, save build artifacts, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/xcode
+
+trigger:
+- master
+
+pool:
+  vmImage: 'macOS-10.13'
+
+steps:
+- script: |
+    gem install bundler
+    bundle install --retry=3 --jobs=4
+  displayName: bundle install
+- task: InstallAppleCertificate@2
+  inputs:
+    certSecureFile: 'hcadist.p12'
+    certPwd: 'skye'
+    deleteCert: true
+- task: InstallAppleProvisioningProfile@1
+  inputs:
+    provisioningProfileLocation: 'secureFiles'
+    provProfileSecureFile: 'SOBrowserDistribution.mobileprovision'
+    removeProfile: true
+- task: InstallAppleProvisioningProfile@1
+  inputs:
+    provisioningProfileLocation: 'secureFiles'
+    provProfileSecureFile: 'SOExplorerDevelopment.mobileprovision'
+    removeProfile: true
+- task: CocoaPods@0
+  inputs:
+    forceRepoUpdate: true
+- script: |
+    bundle exec fastlane createIntegrationBuild --env so
+  displayName: Fastlane
+- script: |
+    pip install beautifulsoup4
+    python embedCSSForCoverage.py
+  displayName: Embed CSS for Code Coverage Report
+- task: PublishCodeCoverageResults@1
+  inputs:
+    codeCoverageTool: 'cobertura'
+    summaryFileLocation: '$(System.DefaultWorkingDirectory)/fastlane/test_output/slather/cobertura.xml'
+    reportDirectory: '$(System.DefaultWorkingDirectory)/fastlane/test_output/slather'
+    failIfCoverageEmpty: true
+    publishRunAttachments: true
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'JUnit'
+    testResultsFiles: '$(System.DefaultWorkingDirectory)/fastlane/test_output/*.junit'
+    searchFolder: '$(System.DefaultWorkingDirectory)/fastlane/test_output'
+    failTaskOnFailedTests: true

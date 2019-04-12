@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="fastlane.lanes">
+    
+    
+    
+      
+      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.017337">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="1: xcversion" time="0.444152">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="2: Switch to ios build lane" time="0.001112">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="3: gym" time="115.102894">
+        
+      </testcase>
+    
+  </testsuite>
+</testsuites>
